@@ -237,3 +237,143 @@ span.a {
   -webkit-transform: rotate(180deg);
   transition: rotate(180deg);
 }
+
+.jkp {
+  display: none;
+  translate: 0 -1vh;
+  opacity: 0;
+
+  transition-property: display overlay opacity;
+  transition-duration: 0.5s;
+  transition-behavior: allow-discrete;
+}
+
+.jkp.jkpshow {
+  display: block;
+  opacity: 1;
+  translate: 0 0;
+  @starting-style {
+    opacity: 0;
+    translate: 0 -1vh;
+  }
+}
+
+.kpjasinid {
+  display: none;
+  translate: 0 -1vh;
+  opacity: 0;
+
+  transition-property: display overlay opacity;
+  transition-duration: 0.5s;
+  transition-behavior: allow-discrete;
+}
+
+.kpjasinid.kpjasinidshow {
+  display: block;
+  opacity: 1;
+  translate: 0 0;
+  @starting-style {
+    opacity: 0;
+    translate: 0 -1vh;
+  }
+}
+
+.kpumbaiid {
+  display: none;
+  translate: 0 -1vh;
+  opacity: 0;
+
+  transition-property: display overlay opacity;
+  transition-duration: 0.5s;
+  transition-behavior: allow-discrete;
+}
+
+.kpumbaiid.kpumbaiidshow {
+  display: block;
+  opacity: 1;
+  translate: 0 0;
+  @starting-style {
+    opacity: 0;
+    translate: 0 -1vh;
+  }
+}
+
+.kpmerlimauid {
+  display: none;
+  translate: 0 -1vh;
+  opacity: 0;
+
+  transition-property: display overlay opacity;
+  transition-duration: 0.5s;
+  transition-behavior: allow-discrete;
+}
+
+.kpmerlimauid.kpmerlimauidshow {
+  display: block;
+  opacity: 1;
+  translate: 0 0;
+  @starting-style {
+    opacity: 0;
+    translate: 0 -1vh;
+  }
+}
+
+.kpselandarid {
+  display: none;
+  translate: 0 -1vh;
+  opacity: 0;
+
+  transition-property: display overlay opacity;
+  transition-duration: 0.5s;
+  transition-behavior: allow-discrete;
+}
+
+.kpselandarid.kpselandaridshow {
+  display: block;
+  opacity: 1;
+  translate: 0 0;
+  @starting-style {
+    opacity: 0;
+    translate: 0 -1vh;
+  }
+}
+
+.mtkp {
+  display: none;
+  translate: 0 -1vh;
+  opacity: 0;
+
+  transition-property: display overlay opacity;
+  transition-duration: 0.5s;
+  transition-behavior: allow-discrete;
+}
+
+.mtkp.mtkpshow {
+  display: block;
+  opacity: 1;
+  translate: 0 0;
+  @starting-style {
+    opacity: 0;
+    translate: 0 -1vh;
+  }
+}
+
+.agkp {
+  display: none;
+  translate: 0 -1vh;
+  opacity: 0;
+
+  transition-property: display overlay opacity;
+  transition-duration: 0.5s;
+  transition-behavior: allow-discrete;
+}
+
+.agkp.agkpshow {
+  display: block;
+  opacity: 1;
+  translate: 0 0;
+  @starting-style {
+    opacity: 0;
+    translate: 0 -1vh;
+  }
+}
