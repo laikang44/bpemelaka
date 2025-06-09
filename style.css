@@ -1,3 +1,18 @@
+.gridcontainer {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .gridcontainer {
+    display: inline-grid;
+    grid-template-columns: auto auto;
+  }
+
+  .framedaerah {
+    height: 520px;
+  }
+}
+
 h2 {
   font-size: 2.5rem;
   position: relative;
