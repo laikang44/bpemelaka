@@ -122,6 +122,23 @@
 
       </div>
 
+      <br>
+
+      <h3 class="kpsimpangbekoh"><span class="a"><a class="kp-head">Klinik Pergigian Simpang Bekoh</a><img class="rotatekpsimpangbekoh" src="arrow.png"></img></span></h3>
+        
+      <br>
+
+      <div class="kpsimpangbekohid" id="kpsimpangbekohid2">
+
+        <iframe id="frame" height="250rem" width="330rem" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRlYP6gZfnpDMB9YDh9zzMo14efesSjxSsEI0540DcmaWxgHBZZgX5htiuyNMIUnblTFQxnsNk6PioB/pubhtml?gid=1327355167&single=true"></iframe>
+
+        <br>
+        <br>
+
+        <button style="width: 10rem; height: 2rem;" onclick="window.open('https://docs.google.com/spreadsheets/d/1HHDWKZvi1SV2kYrWGmi6ZCRaBGjEF-0iFSIyd9dgnK0/edit?usp=drive_link')">Senarai Pesakit</button>
+
+      </div>
+
     </div>  
 
   </div>
@@ -183,6 +200,12 @@ document.querySelector(".rotatekpmerlimau").addEventListener("click", function (
 document.querySelector(".rotatekpselandar").addEventListener("click", function () {
   this.classList.toggle("downselandar");
   document.querySelector(".kpselandarid").classList.toggle("kpselandaridshow");
+
+  });
+
+  document.querySelector(".rotatekpsimpangbekoh").addEventListener("click", function () {
+  this.classList.toggle("downsimpangbekoh");
+  document.querySelector(".kpsimpangbekohid").classList.toggle("kpsimpangbekohidshow");
 
   });
 

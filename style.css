@@ -46,7 +46,7 @@ h3:hover {
 }
 
 h2:after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -57,7 +57,7 @@ h2:after {
 }
 
 h3:after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -253,6 +253,30 @@ span.a {
   transition: rotate(180deg);
 }
 
+.rotatekpsimpangbekoh {
+  -moz-transform: transform 0.5s linear;
+  -webkit-transform: transform 0.5s linear;
+  transition: transform 0.5s linear;
+  border-radius: 100%;
+  border-style: solid;
+  border-width: 0.05rem;
+  border-color: black;
+  padding-bottom: 0.1rem;
+  height: 0.7em;
+  width: 1em;
+}
+
+.rotatekpsimpangbekoh:hover {
+  opacity: 65%;
+  background-color: #cacaca;
+}
+
+.rotatekpsimpangbekoh.downsimpangbekoh {
+  -moz-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transition: rotate(180deg);
+}
+
 .jkp {
   display: none;
   translate: 0 -1vh;
@@ -344,6 +368,26 @@ span.a {
 }
 
 .kpselandarid.kpselandaridshow {
+  display: block;
+  opacity: 1;
+  translate: 0 0;
+  @starting-style {
+    opacity: 0;
+    translate: 0 -1vh;
+  }
+}
+
+.kpsimpangbekohid {
+  display: none;
+  translate: 0 -1vh;
+  opacity: 0;
+
+  transition-property: display overlay opacity;
+  transition-duration: 0.5s;
+  transition-behavior: allow-discrete;
+}
+
+.kpsimpangbekohid.kpsimpangbekohidshow {
   display: block;
   opacity: 1;
   translate: 0 0;
