@@ -1,15 +1,67 @@
 .gridcontainer {
+  display: none;
+}
+
+.gridcontainer.gridcontainershow {
   display: block;
 }
 
-@media (min-width: 768px) {
+.daerahjcontrol {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.daerahjcontrol:hover {
+  color: gray;
+  cursor: pointer;
+}
+
+@media (min-width: 2040px) {
   .gridcontainer {
     display: inline-grid;
     grid-template-columns: auto auto;
   }
 
-  .framedaerah {
-    height: 520px;
+  .framedaeraht {
+    height: 570px;
+  }
+
+  .framekpt {
+    height: 310px;
+  }
+}
+
+@media (min-width: 768px) {
+  .framedaeraht {
+    width: 1000px;
+  }
+
+  .framedaeraht2 {
+    width: 1500px;
+  }
+
+  .framedaerahc {
+    width: 1000px;
+  }
+
+  .framedaerahc2 {
+    width: 1500px;
+  }
+
+  .framekpt {
+    width: 1000px;
+  }
+
+  .framekpt2 {
+    width: 1500px;
+  }
+
+  .framekpc {
+    width: 1000px;
+  }
+
+  .framekpc2 {
+    width: 1500px;
   }
 }
 
