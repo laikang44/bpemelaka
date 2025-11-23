@@ -1,8 +1,10 @@
-.gridcontainer {
+/* section district data */
+
+.gridcontainerjasin {
   display: none;
 }
 
-.gridcontainer.gridcontainershow {
+.gridcontainerjasin.gridcontainerjasinshow {
   display: block;
 }
 
@@ -15,6 +17,44 @@
   color: gray;
   cursor: pointer;
 }
+
+.gridcontainermelakatengah {
+  display: none;
+}
+
+.gridcontainermelakatengah.gridcontainermelakatengahshow {
+  display: block;
+}
+
+.daerahmtcontrol {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.daerahmtcontrol:hover {
+  color: gray;
+  cursor: pointer;
+}
+
+.gridcontaineralorgajah {
+  display: none;
+}
+
+.gridcontaineralorgajah.gridcontaineralorgajahshow {
+  display: block;
+}
+
+.daerahagcontrol {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.daerahagcontrol:hover {
+  color: gray;
+  cursor: pointer;
+}
+
+/* section resolution control */
 
 @media (min-width: 2040px) {
   .gridcontainer {
@@ -65,8 +105,33 @@
   }
 }
 
-h2 {
+/* section general css */
+
+.daerahlinebreak {
+  padding-bottom: 20px;
+  padding-top: 20px;
+  border-bottom: 2px solid black;
+  border-top: 2px solid black;
+}
+
+h1 {
   font-size: 2.5rem;
+  position: relative;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.header {
+  margin: auto;
+  width: 100%;
+  padding-bottom: 20px;
+  border-bottom: 2px solid black;
+}
+
+h2 {
+  font-size: 2rem;
   position: relative;
   padding-top: 0.3rem;
   padding-bottom: 0.3rem;
@@ -78,7 +143,7 @@ h2 span {
 }
 
 h3 {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   position: relative;
   padding-top: 0.3rem;
   padding-bottom: 0.3rem;
@@ -132,6 +197,8 @@ span.a {
   background-color: white;
   padding-right: 1rem;
 }
+
+/* section district arrow */
 
 .rotatemt {
   -moz-transform: transform 0.5s linear;
@@ -208,6 +275,8 @@ span.a {
 .district-head {
   padding-right: 1em;
 }
+
+/* section kp arrow jasin*/
 
 .rotatekpjasin {
   -moz-transform: transform 0.5s linear;
@@ -329,6 +398,396 @@ span.a {
   transition: rotate(180deg);
 }
 
+/* section kp arrow melaka tengah*/
+
+.rotatekpmelakatengah {
+  -moz-transform: transform 0.5s linear;
+  -webkit-transform: transform 0.5s linear;
+  transition: transform 0.5s linear;
+  border-radius: 100%;
+  border-style: solid;
+  border-width: 0.05rem;
+  border-color: black;
+  padding-bottom: 0.1rem;
+  height: 0.7em;
+  width: 1em;
+}
+
+.rotatekpmelakatengah:hover {
+  opacity: 65%;
+  background-color: #cacaca;
+}
+
+.rotatekpmelakatengah.downmelakatengah {
+  -moz-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transition: rotate(180deg);
+}
+
+.rotatekpayerkeroh {
+  -moz-transform: transform 0.5s linear;
+  -webkit-transform: transform 0.5s linear;
+  transition: transform 0.5s linear;
+  border-radius: 100%;
+  border-style: solid;
+  border-width: 0.05rem;
+  border-color: black;
+  padding-bottom: 0.1rem;
+  height: 0.7em;
+  width: 1em;
+}
+
+.rotatekpayerkeroh:hover {
+  opacity: 65%;
+  background-color: #cacaca;
+}
+
+.rotatekpayerkeroh.downayerkeroh {
+  -moz-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transition: rotate(180deg);
+}
+
+.rotatekpayermolek {
+  -moz-transform: transform 0.5s linear;
+  -webkit-transform: transform 0.5s linear;
+  transition: transform 0.5s linear;
+  border-radius: 100%;
+  border-style: solid;
+  border-width: 0.05rem;
+  border-color: black;
+  padding-bottom: 0.1rem;
+  height: 0.7em;
+  width: 1em;
+}
+
+.rotatekpayermolek:hover {
+  opacity: 65%;
+  background-color: #cacaca;
+}
+
+.rotatekpayermolek.downayermolek {
+  -moz-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transition: rotate(180deg);
+}
+
+.rotatekpbatuberendam {
+  -moz-transform: transform 0.5s linear;
+  -webkit-transform: transform 0.5s linear;
+  transition: transform 0.5s linear;
+  border-radius: 100%;
+  border-style: solid;
+  border-width: 0.05rem;
+  border-color: black;
+  padding-bottom: 0.1rem;
+  height: 0.7em;
+  width: 1em;
+}
+
+.rotatekpbatuberendam:hover {
+  opacity: 65%;
+  background-color: #cacaca;
+}
+
+.rotatekpbatuberendam.downbatuberendam {
+  -moz-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transition: rotate(180deg);
+}
+
+.rotatekpcheng {
+  -moz-transform: transform 0.5s linear;
+  -webkit-transform: transform 0.5s linear;
+  transition: transform 0.5s linear;
+  border-radius: 100%;
+  border-style: solid;
+  border-width: 0.05rem;
+  border-color: black;
+  padding-bottom: 0.1rem;
+  height: 0.7em;
+  width: 1em;
+}
+
+.rotatekpcheng:hover {
+  opacity: 65%;
+  background-color: #cacaca;
+}
+
+.rotatekpcheng.downcheng {
+  -moz-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transition: rotate(180deg);
+}
+
+.rotatekpklebang {
+  -moz-transform: transform 0.5s linear;
+  -webkit-transform: transform 0.5s linear;
+  transition: transform 0.5s linear;
+  border-radius: 100%;
+  border-style: solid;
+  border-width: 0.05rem;
+  border-color: black;
+  padding-bottom: 0.1rem;
+  height: 0.7em;
+  width: 1em;
+}
+
+.rotatekpklebang:hover {
+  opacity: 65%;
+  background-color: #cacaca;
+}
+
+.rotatekpklebang.downklebang {
+  -moz-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transition: rotate(180deg);
+}
+
+.rotatekpperinggit {
+  -moz-transform: transform 0.5s linear;
+  -webkit-transform: transform 0.5s linear;
+  transition: transform 0.5s linear;
+  border-radius: 100%;
+  border-style: solid;
+  border-width: 0.05rem;
+  border-color: black;
+  padding-bottom: 0.1rem;
+  height: 0.7em;
+  width: 1em;
+}
+
+.rotatekpperinggit:hover {
+  opacity: 65%;
+  background-color: #cacaca;
+}
+
+.rotatekpperinggit.downperinggit {
+  -moz-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transition: rotate(180deg);
+}
+
+.rotatekpseritanjung {
+  -moz-transform: transform 0.5s linear;
+  -webkit-transform: transform 0.5s linear;
+  transition: transform 0.5s linear;
+  border-radius: 100%;
+  border-style: solid;
+  border-width: 0.05rem;
+  border-color: black;
+  padding-bottom: 0.1rem;
+  height: 0.7em;
+  width: 1em;
+}
+
+.rotatekpseritanjung:hover {
+  opacity: 65%;
+  background-color: #cacaca;
+}
+
+.rotatekpseritanjung.downseritanjung {
+  -moz-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transition: rotate(180deg);
+}
+
+.rotatekptengkera {
+  -moz-transform: transform 0.5s linear;
+  -webkit-transform: transform 0.5s linear;
+  transition: transform 0.5s linear;
+  border-radius: 100%;
+  border-style: solid;
+  border-width: 0.05rem;
+  border-color: black;
+  padding-bottom: 0.1rem;
+  height: 0.7em;
+  width: 1em;
+}
+
+.rotatekptengkera:hover {
+  opacity: 65%;
+  background-color: #cacaca;
+}
+
+.rotatekptengkera.downtengkera {
+  -moz-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transition: rotate(180deg);
+}
+
+.rotatekpujongpasir {
+  -moz-transform: transform 0.5s linear;
+  -webkit-transform: transform 0.5s linear;
+  transition: transform 0.5s linear;
+  border-radius: 100%;
+  border-style: solid;
+  border-width: 0.05rem;
+  border-color: black;
+  padding-bottom: 0.1rem;
+  height: 0.7em;
+  width: 1em;
+}
+
+.rotatekpujongpasir:hover {
+  opacity: 65%;
+  background-color: #cacaca;
+}
+
+.rotatekpujongpasir.downujongpasir {
+  -moz-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transition: rotate(180deg);
+}
+
+.rotatekputc {
+  -moz-transform: transform 0.5s linear;
+  -webkit-transform: transform 0.5s linear;
+  transition: transform 0.5s linear;
+  border-radius: 100%;
+  border-style: solid;
+  border-width: 0.05rem;
+  border-color: black;
+  padding-bottom: 0.1rem;
+  height: 0.7em;
+  width: 1em;
+}
+
+.rotatekputc:hover {
+  opacity: 65%;
+  background-color: #cacaca;
+}
+
+.rotatekputc.downutc {
+  -moz-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transition: rotate(180deg);
+}
+
+/* section kp arrow alor gajah*/
+
+.rotatekpalorgajah {
+  -moz-transform: transform 0.5s linear;
+  -webkit-transform: transform 0.5s linear;
+  transition: transform 0.5s linear;
+  border-radius: 100%;
+  border-style: solid;
+  border-width: 0.05rem;
+  border-color: black;
+  padding-bottom: 0.1rem;
+  height: 0.7em;
+  width: 1em;
+}
+
+.rotatekpalorgajah:hover {
+  opacity: 65%;
+  background-color: #cacaca;
+}
+
+.rotatekpalorgajah.downalorgajah {
+  -moz-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transition: rotate(180deg);
+}
+
+.rotatekpduriantunggal {
+  -moz-transform: transform 0.5s linear;
+  -webkit-transform: transform 0.5s linear;
+  transition: transform 0.5s linear;
+  border-radius: 100%;
+  border-style: solid;
+  border-width: 0.05rem;
+  border-color: black;
+  padding-bottom: 0.1rem;
+  height: 0.7em;
+  width: 1em;
+}
+
+.rotatekpduriantunggal:hover {
+  opacity: 65%;
+  background-color: #cacaca;
+}
+
+.rotatekpduriantunggal.downduriantunggal {
+  -moz-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transition: rotate(180deg);
+}
+
+.rotatekpkualasungaibaru {
+  -moz-transform: transform 0.5s linear;
+  -webkit-transform: transform 0.5s linear;
+  transition: transform 0.5s linear;
+  border-radius: 100%;
+  border-style: solid;
+  border-width: 0.05rem;
+  border-color: black;
+  padding-bottom: 0.1rem;
+  height: 0.7em;
+  width: 1em;
+}
+
+.rotatekpkualasungaibaru:hover {
+  opacity: 65%;
+  background-color: #cacaca;
+}
+
+.rotatekpkualasungaibaru.downkualasungaibaru {
+  -moz-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transition: rotate(180deg);
+}
+
+.rotatekpmasjidtanah {
+  -moz-transform: transform 0.5s linear;
+  -webkit-transform: transform 0.5s linear;
+  transition: transform 0.5s linear;
+  border-radius: 100%;
+  border-style: solid;
+  border-width: 0.05rem;
+  border-color: black;
+  padding-bottom: 0.1rem;
+  height: 0.7em;
+  width: 1em;
+}
+
+.rotatekpmasjidtanah:hover {
+  opacity: 65%;
+  background-color: #cacaca;
+}
+
+.rotatekpmasjidtanah.downmasjidtanah {
+  -moz-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transition: rotate(180deg);
+}
+
+.rotatekprembia {
+  -moz-transform: transform 0.5s linear;
+  -webkit-transform: transform 0.5s linear;
+  transition: transform 0.5s linear;
+  border-radius: 100%;
+  border-style: solid;
+  border-width: 0.05rem;
+  border-color: black;
+  padding-bottom: 0.1rem;
+  height: 0.7em;
+  width: 1em;
+}
+
+.rotatekprembia:hover {
+  opacity: 65%;
+  background-color: #cacaca;
+}
+
+.rotatekprembia.downrembia {
+  -moz-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transition: rotate(180deg);
+}
+
+/* section frame kp jasin */
+
 .jkp {
   display: none;
   translate: 0 -1vh;
@@ -449,6 +908,8 @@ span.a {
   }
 }
 
+/* section frame kp melaka tengah */
+
 .mtkp {
   display: none;
   translate: 0 -1vh;
@@ -468,6 +929,228 @@ span.a {
     translate: 0 -1vh;
   }
 }
+
+.kpmelakatengahid {
+  display: none;
+  translate: 0 -1vh;
+  opacity: 0;
+
+  transition-property: display overlay opacity;
+  transition-duration: 0.5s;
+  transition-behavior: allow-discrete;
+}
+
+.kpmelakatengahid.kpmelakatengahidshow {
+  display: block;
+  opacity: 1;
+  translate: 0 0;
+  @starting-style {
+    opacity: 0;
+    translate: 0 -1vh;
+  }
+}
+
+.kpayerkerohid {
+  display: none;
+  translate: 0 -1vh;
+  opacity: 0;
+
+  transition-property: display overlay opacity;
+  transition-duration: 0.5s;
+  transition-behavior: allow-discrete;
+}
+
+.kpayerkerohid.kpayerkerohidshow {
+  display: block;
+  opacity: 1;
+  translate: 0 0;
+  @starting-style {
+    opacity: 0;
+    translate: 0 -1vh;
+  }
+}
+
+.kpayermolekid {
+  display: none;
+  translate: 0 -1vh;
+  opacity: 0;
+
+  transition-property: display overlay opacity;
+  transition-duration: 0.5s;
+  transition-behavior: allow-discrete;
+}
+
+.kpayermolekid.kpayermolekidshow {
+  display: block;
+  opacity: 1;
+  translate: 0 0;
+  @starting-style {
+    opacity: 0;
+    translate: 0 -1vh;
+  }
+}
+
+.kpbatuberendamid {
+  display: none;
+  translate: 0 -1vh;
+  opacity: 0;
+
+  transition-property: display overlay opacity;
+  transition-duration: 0.5s;
+  transition-behavior: allow-discrete;
+}
+
+.kpbatuberendamid.kpbatuberendamidshow {
+  display: block;
+  opacity: 1;
+  translate: 0 0;
+  @starting-style {
+    opacity: 0;
+    translate: 0 -1vh;
+  }
+}
+
+.kpchengid {
+  display: none;
+  translate: 0 -1vh;
+  opacity: 0;
+
+  transition-property: display overlay opacity;
+  transition-duration: 0.5s;
+  transition-behavior: allow-discrete;
+}
+
+.kpchengid.kpchengidshow {
+  display: block;
+  opacity: 1;
+  translate: 0 0;
+  @starting-style {
+    opacity: 0;
+    translate: 0 -1vh;
+  }
+}
+
+.kpklebangid {
+  display: none;
+  translate: 0 -1vh;
+  opacity: 0;
+
+  transition-property: display overlay opacity;
+  transition-duration: 0.5s;
+  transition-behavior: allow-discrete;
+}
+
+.kpklebangid.kpklebangidshow {
+  display: block;
+  opacity: 1;
+  translate: 0 0;
+  @starting-style {
+    opacity: 0;
+    translate: 0 -1vh;
+  }
+}
+
+.kpperinggitid {
+  display: none;
+  translate: 0 -1vh;
+  opacity: 0;
+
+  transition-property: display overlay opacity;
+  transition-duration: 0.5s;
+  transition-behavior: allow-discrete;
+}
+
+.kpperinggitid.kpperinggitidshow {
+  display: block;
+  opacity: 1;
+  translate: 0 0;
+  @starting-style {
+    opacity: 0;
+    translate: 0 -1vh;
+  }
+}
+
+.kpseritanjungid {
+  display: none;
+  translate: 0 -1vh;
+  opacity: 0;
+
+  transition-property: display overlay opacity;
+  transition-duration: 0.5s;
+  transition-behavior: allow-discrete;
+}
+
+.kpseritanjungid.kpseritanjungidshow {
+  display: block;
+  opacity: 1;
+  translate: 0 0;
+  @starting-style {
+    opacity: 0;
+    translate: 0 -1vh;
+  }
+}
+
+.kptengkeraid {
+  display: none;
+  translate: 0 -1vh;
+  opacity: 0;
+
+  transition-property: display overlay opacity;
+  transition-duration: 0.5s;
+  transition-behavior: allow-discrete;
+}
+
+.kptengkeraid.kptengkeraidshow {
+  display: block;
+  opacity: 1;
+  translate: 0 0;
+  @starting-style {
+    opacity: 0;
+    translate: 0 -1vh;
+  }
+}
+
+.kpujongpasirid {
+  display: none;
+  translate: 0 -1vh;
+  opacity: 0;
+
+  transition-property: display overlay opacity;
+  transition-duration: 0.5s;
+  transition-behavior: allow-discrete;
+}
+
+.kpujongpasirid.kpujongpasiridshow {
+  display: block;
+  opacity: 1;
+  translate: 0 0;
+  @starting-style {
+    opacity: 0;
+    translate: 0 -1vh;
+  }
+}
+
+.kputcid {
+  display: none;
+  translate: 0 -1vh;
+  opacity: 0;
+
+  transition-property: display overlay opacity;
+  transition-duration: 0.5s;
+  transition-behavior: allow-discrete;
+}
+
+.kputcid.kputcidshow {
+  display: block;
+  opacity: 1;
+  translate: 0 0;
+  @starting-style {
+    opacity: 0;
+    translate: 0 -1vh;
+  }
+}
+
+/* section frame kp alor gajah */
 
 .agkp {
   display: none;
@@ -489,9 +1172,102 @@ span.a {
   }
 }
 
-.daerahlinebreak {
-  padding-bottom: 20px;
-  padding-top: 20px;
-  border-bottom: 2px solid black;
-  border-top: 2px solid black;
+.kpalorgajahid {
+  display: none;
+  translate: 0 -1vh;
+  opacity: 0;
+
+  transition-property: display overlay opacity;
+  transition-duration: 0.5s;
+  transition-behavior: allow-discrete;
+}
+
+.kpalorgajahid.kpalorgajahidshow {
+  display: block;
+  opacity: 1;
+  translate: 0 0;
+  @starting-style {
+    opacity: 0;
+    translate: 0 -1vh;
+  }
+}
+
+.kpduriantunggalid {
+  display: none;
+  translate: 0 -1vh;
+  opacity: 0;
+
+  transition-property: display overlay opacity;
+  transition-duration: 0.5s;
+  transition-behavior: allow-discrete;
+}
+
+.kpduriantunggalid.kpduriantunggalidshow {
+  display: block;
+  opacity: 1;
+  translate: 0 0;
+  @starting-style {
+    opacity: 0;
+    translate: 0 -1vh;
+  }
+}
+
+.kpkualasungaibaruid {
+  display: none;
+  translate: 0 -1vh;
+  opacity: 0;
+
+  transition-property: display overlay opacity;
+  transition-duration: 0.5s;
+  transition-behavior: allow-discrete;
+}
+
+.kpkualasungaibaruid.kpkualasungaibaruidshow {
+  display: block;
+  opacity: 1;
+  translate: 0 0;
+  @starting-style {
+    opacity: 0;
+    translate: 0 -1vh;
+  }
+}
+
+.kpmasjidtanahid {
+  display: none;
+  translate: 0 -1vh;
+  opacity: 0;
+
+  transition-property: display overlay opacity;
+  transition-duration: 0.5s;
+  transition-behavior: allow-discrete;
+}
+
+.kpmasjidtanahid.kpmasjidtanahidshow {
+  display: block;
+  opacity: 1;
+  translate: 0 0;
+  @starting-style {
+    opacity: 0;
+    translate: 0 -1vh;
+  }
+}
+
+.kprembiaid {
+  display: none;
+  translate: 0 -1vh;
+  opacity: 0;
+
+  transition-property: display overlay opacity;
+  transition-duration: 0.5s;
+  transition-behavior: allow-discrete;
+}
+
+.kprembiaid.kprembiaidshow {
+  display: block;
+  opacity: 1;
+  translate: 0 0;
+  @starting-style {
+    opacity: 0;
+    translate: 0 -1vh;
+  }
 }
