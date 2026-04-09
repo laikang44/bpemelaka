@@ -1,4 +1,7 @@
 /* section district data */
+.chart {
+  display: none;
+}
 
 .gridcontainerjasin {
   display: none;
@@ -163,7 +166,7 @@ h3:hover {
 }
 
 h2:after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: 0;
   left: 0;
@@ -174,7 +177,7 @@ h2:after {
 }
 
 h3:after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: 0;
   left: 0;

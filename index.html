@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BPE Negeri Melaka</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -273,6 +274,10 @@
         <div><p class="daerahjcontrol" id="daerahjcontrolid">Paparkan Data Daerah</p></div>
 
         <div class="gridcontainerjasin">
+
+          <div class="chart">
+            <canvas id="myChart"></canvas>
+          </div>
 
           <div>
 
@@ -746,5 +751,55 @@ document.querySelector(".rotatekpmasjidtanah").addEventListener("click", functio
   document.querySelector(".kprembiaid").classList.toggle("kprembiaidshow");
 
   });
+
+  const ctx = document.getElementById('myChart');
+
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Penskaleran', 'Penilaian pertama', 'Penilaian kedua', 'Penilaian ketiga', 'Penurunan Skor BPE', 'Peningkatan Skor BPE', 'Dirujuk'],
+      datasets: [{
+        label: 'Peratus',
+        data: [36.50, 7.87, 2.25, 0, 1.69, 0.56, 0.56],
+        backgroundColor: 'rgba(0, 255, 0, 1)', // Single color
+        borderColor: 'rgba(1, 1, 1, 1)',
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true,
+          ticks: {
+            // Appends a % symbol to each tick value
+            callback: function(value) {
+              return value + '%';
+            }
+          }
+        }
+      },
+      plugins:{
+        legend: {
+          display: false
+        },
+        title: {
+          display: true,
+          text: 'Pesakit Skor BPE 3',
+          font: {
+            size: 24
+          }
+        }
+      },
+      tooltips: {
+        callbacks: {
+           label: function(tooltipItem) {
+                  return tooltipItem.yLabel;
+           }
+        }
+      }
+    }
+  });
+
+  new Chart()
 
 </script>
