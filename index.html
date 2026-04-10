@@ -277,8 +277,27 @@
 
           <div class="chart">
             <canvas id="myChart"></canvas>
-          </div>
+            <button onclick="createChart(data1)">test1</button><button onclick="createChart(data2)">test2</button><button onclick="testDrop()">test3</button>
+            <br>
+            <label for="year">Tahun :</label>
+              <select name="year" id="year" onchange="testDrop()">
+                <option value="2026">2026</option>
+                <option value="2025">2025</option>
+              </select>
+            <br>
+            <label for="facility">Data :</label>
+              <select name="facility" id="facility">
+                <option value="DJ">Daerah Jasin</option>
+                <option value="KPJ">KP Jasin</option>
+                <option value="KPM">KP Merlimau</option>
+                <option value="KPU">KP Umbai</option>
+                <option value="KPS">KP Selandar</option>
+                <option value="KPSB">KP Simpang Bekoh</option>
+              </select>
 
+            
+          </div>
+          <br>
           <div>
 
             <iframe class="framedaeraht" id="frame" height="310px" width="750px" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRjnySZBWDUAk2-KTOAz4EuHVuKFkJoz_hA2eIfP9lBLehSHhN3hX3GcL6T-EbHfXBtv08w1hfEk4pB/pubhtml?gid=845074519&single=true"></iframe>
@@ -753,14 +772,19 @@ document.querySelector(".rotatekpmasjidtanah").addEventListener("click", functio
   });
 
   const ctx = document.getElementById('myChart');
+  var data1 = [36.50, 7.87, 2.25, 0, 1.69, 0.56, 0.56];
+  var data2 = [50, 50, 50, 50, 50, 50, 50];
+  let theChart;
 
-  new Chart(ctx, {
+  selectYear = document.querySelector('#year');
+
+  theChart = new Chart(ctx, {
     type: 'bar',
     data: {
       labels: ['Penskaleran', 'Penilaian pertama', 'Penilaian kedua', 'Penilaian ketiga', 'Penurunan Skor BPE', 'Peningkatan Skor BPE', 'Dirujuk'],
       datasets: [{
         label: 'Peratus',
-        data: [36.50, 7.87, 2.25, 0, 1.69, 0.56, 0.56],
+        data: data1,
         backgroundColor: 'rgba(0, 255, 0, 1)', // Single color
         borderColor: 'rgba(1, 1, 1, 1)',
         borderWidth: 1
@@ -770,6 +794,8 @@ document.querySelector(".rotatekpmasjidtanah").addEventListener("click", functio
       scales: {
         y: {
           beginAtZero: true,
+          min: 0,
+          max: 50,
           ticks: {
             // Appends a % symbol to each tick value
             callback: function(value) {
@@ -800,6 +826,68 @@ document.querySelector(".rotatekpmasjidtanah").addEventListener("click", functio
     }
   });
 
-  new Chart()
+  function createChart(theData) {
+
+    theChart.destroy();
+    theChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Penskaleran', 'Penilaian pertama', 'Penilaian kedua', 'Penilaian ketiga', 'Penurunan Skor BPE', 'Peningkatan Skor BPE', 'Dirujuk'],
+      datasets: [{
+        label: 'Peratus',
+        data: theData,
+        backgroundColor: 'rgba(0, 255, 0, 1)', // Single color
+        borderColor: 'rgba(1, 1, 1, 1)',
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true,
+          min: 0,
+          max: 50,
+          ticks: {
+            // Appends a % symbol to each tick value
+            callback: function(value) {
+              return value + '%';
+            }
+          }
+        }
+      },
+      plugins:{
+        legend: {
+          display: false
+        },
+        title: {
+          display: true,
+          text: 'Pesakit Skor BPE 3',
+          font: {
+            size: 24
+          }
+        }
+      },
+      tooltips: {
+        callbacks: {
+           label: function(tooltipItem) {
+                  return tooltipItem.yLabel;
+           }
+        }
+      }
+    }
+  });
+
+  }
+
+  function testDrop() {
+    console.log(selectYear.value)
+    if (selectYear.value == 2026) {
+      createChart(data2);
+      console.log("c2026");
+    } else if (selectYear.value == 2025) {
+      createChart(data1);
+      console.log("c2025");
+    }
+  }
 
 </script>

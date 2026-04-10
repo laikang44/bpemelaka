@@ -1,6 +1,7 @@
 /* section district data */
 .chart {
-  display: none;
+  /* display: none; */
+  width: 70%;
 }
 
 .gridcontainerjasin {
