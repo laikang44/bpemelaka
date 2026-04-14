@@ -276,16 +276,12 @@
         <div class="gridcontainerjasin">
 
           <div class="chart">
-            <canvas id="myChart"></canvas>
-            <button onclick="createChart(data1)">test1</button><button onclick="createChart(data2)">test2</button><button onclick="testDrop()">test3</button>
-            <br>
             <label for="year">Tahun :</label>
               <select name="year" id="year" onchange="testDrop()">
                 <option value="2026">2026</option>
                 <option value="2025">2025</option>
               </select>
-            <br>
-            <label for="facility">Data :</label>
+            <label for="facility">Klinik Pergigian :</label>
               <select name="facility" id="facility">
                 <option value="DJ">Daerah Jasin</option>
                 <option value="KPJ">KP Jasin</option>
@@ -294,6 +290,8 @@
                 <option value="KPS">KP Selandar</option>
                 <option value="KPSB">KP Simpang Bekoh</option>
               </select>
+            <canvas id="myChart" class="myChart"></canvas>
+            <br>
 
             
           </div>
@@ -791,6 +789,8 @@ document.querySelector(".rotatekpmasjidtanah").addEventListener("click", functio
       }]
     },
     options: {
+      responsive: true,
+      maintainAspectRatio: true,
       scales: {
         y: {
           beginAtZero: true,
@@ -828,54 +828,59 @@ document.querySelector(".rotatekpmasjidtanah").addEventListener("click", functio
 
   function createChart(theData) {
 
-    theChart.destroy();
-    theChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels: ['Penskaleran', 'Penilaian pertama', 'Penilaian kedua', 'Penilaian ketiga', 'Penurunan Skor BPE', 'Peningkatan Skor BPE', 'Dirujuk'],
-      datasets: [{
-        label: 'Peratus',
-        data: theData,
-        backgroundColor: 'rgba(0, 255, 0, 1)', // Single color
-        borderColor: 'rgba(1, 1, 1, 1)',
-        borderWidth: 1
-      }]
-    },
-    options: {
-      scales: {
-        y: {
-          beginAtZero: true,
-          min: 0,
-          max: 50,
-          ticks: {
-            // Appends a % symbol to each tick value
-            callback: function(value) {
-              return value + '%';
-            }
-          }
-        }
-      },
-      plugins:{
-        legend: {
-          display: false
-        },
-        title: {
-          display: true,
-          text: 'Pesakit Skor BPE 3',
-          font: {
-            size: 24
-          }
-        }
-      },
-      tooltips: {
-        callbacks: {
-           label: function(tooltipItem) {
-                  return tooltipItem.yLabel;
-           }
-        }
-      }
-    }
-  });
+  //   theChart.destroy();
+  //   theChart = new Chart(ctx, {
+  //   type: 'bar',
+  //   data: {
+  //     labels: ['Penskaleran', 'Penilaian pertama', 'Penilaian kedua', 'Penilaian ketiga', 'Penurunan Skor BPE', 'Peningkatan Skor BPE', 'Dirujuk'],
+  //     datasets: [{
+  //       label: 'Peratus',
+  //       data: theData,
+  //       backgroundColor: 'rgba(0, 255, 0, 1)', // Single color
+  //       borderColor: 'rgba(1, 1, 1, 1)',
+  //       borderWidth: 1
+  //     }]
+  //   },
+  //   options: {
+  //     responsive: true,
+  //     maintainAspectRatio: true,
+  //     scales: {
+  //       y: {
+  //         beginAtZero: true,
+  //         min: 0,
+  //         max: 50,
+  //         ticks: {
+  //           // Appends a % symbol to each tick value
+  //           callback: function(value) {
+  //             return value + '%';
+  //           }
+  //         }
+  //       }
+  //     },
+  //     plugins:{
+  //       legend: {
+  //         display: false
+  //       },
+  //       title: {
+  //         display: true,
+  //         text: 'Pesakit Skor BPE 3',
+  //         font: {
+  //           size: 24
+  //         }
+  //       }
+  //     },
+  //     tooltips: {
+  //       callbacks: {
+  //          label: function(tooltipItem) {
+  //                 return tooltipItem.yLabel;
+  //          }
+  //       }
+  //     }
+  //   }
+  // });
+
+    theChart.data.datasets[0].data = theData;
+    theChart.update();
 
   }
 
