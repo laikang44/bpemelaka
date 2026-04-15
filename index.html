@@ -274,15 +274,16 @@
         <div><p class="daerahjcontrol" id="daerahjcontrolid">Paparkan Data Daerah</p></div>
 
         <div class="gridcontainerjasin">
+          
 
           <div class="chart">
-            <label for="year">Tahun :</label>
-              <select name="year" id="year" onchange="testDrop()">
+            <label for="yearJasin">Tahun :</label>
+              <select name="yearJasin" id="yearJasin" onchange="changeDropJasin()">
                 <option value="2026">2026</option>
                 <option value="2025">2025</option>
               </select>
-            <label for="facility">Klinik Pergigian :</label>
-              <select name="facility" id="facility">
+            <label for="facilityJasin">Klinik Pergigian :</label>
+              <select name="facilityJasin" id="facilityJasin" onchange="changeDropJasin()">
                 <option value="DJ">Daerah Jasin</option>
                 <option value="KPJ">KP Jasin</option>
                 <option value="KPM">KP Merlimau</option>
@@ -290,33 +291,87 @@
                 <option value="KPS">KP Selandar</option>
                 <option value="KPSB">KP Simpang Bekoh</option>
               </select>
-            <canvas id="myChart" class="myChart"></canvas>
+              
+              <div><br><p class="chartTitle">Pesakit BPE 3</p></div>
+              <div>
+
+                <table id="tablejasinbpe3">
+                  <tr id="headerjasinbpe3row">
+                   <th>Jumlah</th>
+                   <th>Penskaleran</th>
+                   <th>Penilaian Pertama</th>
+                   <th>Penilaian Kedua</th>
+                   <th>Penilaian Ketiga</th>
+                   <th>Penurunan Skor BPE</th>
+                   <th>Peningkatan Skor BPE</th>
+                    <th>Dirujuk</th>
+                  </tr>
+                  <tr id="datajasinbpe3row">
+                    <td id="data1jasinbpe3" class="data1jasinbpe3row"></td>
+                    <td id="data2jasinbpe3" class="data2jasinbpe3row"></td>
+                    <td id="data3jasinbpe3" class="data3jasinbpe3row"></td>
+                    <td id="data4jasinbpe3" class="data4jasinbpe3row"></td>
+                    <td id="data5jasinbpe3" class="data5jasinbpe3row"></td>
+                    <td id="data6jasinbpe3" class="data6jasinbpe3row"></td>
+                    <td id="data7jasinbpe3" class="data7jasinbpe3row"></td>
+                    <td id="data8jasinbpe3" class="data8jasinbpe3row"></td>
+                 </tr>
+                </table>
+
+              </div>
+
+            <br>
+            <canvas id="chartJasinBPE3" class="chartJasinBPE3"></canvas>
             <br>
 
+            <div><br><p class="chartTitle">Pesakit BPE 4</p></div>
+              <div>
+
+                <table id="tablejasinbpe4">
+                  <tr id="headerjasinbpe4row">
+                   <th>Jumlah</th>
+                   <th>Pesakit enggan</th>
+                   <th>Pesakit minta masa</th>
+                   <th>Rawatan Susulan</th>
+                   <th>Indikasi Rawatan Lain</th>
+                   <th>Masalah logistik</th>
+                   <th>Keadaan pesakit</th>
+                   <th>Pesakit menetap negeri lain</th>
+                   <th>Bawah unit perio</th>
+                   <th>Tidak hadir temujanji</th>
+                   <th>Kekangan Masa</th>
+                   <th>Tiada sebab</th>
+                   <th>Dirujuk</th>
+                  </tr>
+                  <tr id="datajasinbpe4row">
+                    <td id="data1jasinbpe4" class="data1jasinbpe4row"></td>
+                    <td id="data2jasinbpe4" class="data2jasinbpe4row"></td>
+                    <td id="data3jasinbpe4" class="data3jasinbpe4row"></td>
+                    <td id="data4jasinbpe4" class="data4jasinbpe4row"></td>
+                    <td id="data5jasinbpe4" class="data5jasinbpe4row"></td>
+                    <td id="data6jasinbpe4" class="data6jasinbpe4row"></td>
+                    <td id="data7jasinbpe4" class="data7jasinbpe4row"></td>
+                    <td id="data8jasinbpe4" class="data8jasinbpe4row"></td>
+                    <td id="data9jasinbpe4" class="data9jasinbpe4row"></td>
+                    <td id="data10jasinbpe4" class="data10jasinbpe4row"></td>
+                    <td id="data11jasinbpe4" class="data11jasinbpe4row"></td>
+                    <td id="data12jasinbpe4" class="data12jasinbpe4row"></td>
+                    <td id="data13jasinbpe4" class="data13jasinbpe4row"></td>
+                 </tr>
+                </table>
+
+              </div>
+
+            <br>
+            <canvas id="chartJasinBPE4" class="chartJasinBPE4"></canvas>
+            <br>
             
           </div>
           <br>
-          <div>
-
-            <iframe class="framedaeraht" id="frame" height="310px" width="750px" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRjnySZBWDUAk2-KTOAz4EuHVuKFkJoz_hA2eIfP9lBLehSHhN3hX3GcL6T-EbHfXBtv08w1hfEk4pB/pubhtml?gid=845074519&single=true"></iframe>
-            <iframe class="framedaerahc" id="frame" height="570px" width="750px" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRjnySZBWDUAk2-KTOAz4EuHVuKFkJoz_hA2eIfP9lBLehSHhN3hX3GcL6T-EbHfXBtv08w1hfEk4pB/pubchart?oid=1953168546&format=interactive"></iframe>
-      
-            <br>
-            <br>
-            <br>
-            <br>
-
-            <iframe class="framedaeraht2" id="frame" height="310px" width="1000px" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRjnySZBWDUAk2-KTOAz4EuHVuKFkJoz_hA2eIfP9lBLehSHhN3hX3GcL6T-EbHfXBtv08w1hfEk4pB/pubhtml?gid=1015495124&single=true"></iframe>
-            <iframe class="framedaerahc2" id="frame" height="570px" width="1000px" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRjnySZBWDUAk2-KTOAz4EuHVuKFkJoz_hA2eIfP9lBLehSHhN3hX3GcL6T-EbHfXBtv08w1hfEk4pB/pubchart?oid=177434581&format=interactive"></iframe>
-
-            <br>
-
-          </div>
-
           <br>
           <br>
 
-          <button style="width: 15rem; height: 5rem;" onclick="window.open('https://docs.google.com/spreadsheets/d/1GKABiIYbR24eKCSP7UwHbZL_hPebiUIp0v0t4lCczoc/edit?usp=drive_link')">Senarai Pesakit Daerah</button>
+          <button style="width: 15rem; height: 2rem;" onclick="window.open('https://docs.google.com/spreadsheets/d/1GKABiIYbR24eKCSP7UwHbZL_hPebiUIp0v0t4lCczoc/edit?usp=drive_link')">Senarai Pesakit Daerah</button>
 
         </div>
 
@@ -769,130 +824,419 @@ document.querySelector(".rotatekpmasjidtanah").addEventListener("click", functio
 
   });
 
-  const ctx = document.getElementById('myChart');
-  var data1 = [36.50, 7.87, 2.25, 0, 1.69, 0.56, 0.56];
-  var data2 = [50, 50, 50, 50, 50, 50, 50];
-  let theChart;
+  // chartsection
 
-  selectYear = document.querySelector('#year');
+  let theChartJasinBPE3;
+  let theChartJasinBPE4;
+  let input1;
+  let input2;
+  let texttoremove;
+  const chartJasinBPE3 = document.getElementById('chartJasinBPE3');
+  const chartJasinBPE4 = document.getElementById('chartJasinBPE4');
 
-  theChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels: ['Penskaleran', 'Penilaian pertama', 'Penilaian kedua', 'Penilaian ketiga', 'Penurunan Skor BPE', 'Peningkatan Skor BPE', 'Dirujuk'],
-      datasets: [{
-        label: 'Peratus',
-        data: data1,
-        backgroundColor: 'rgba(0, 255, 0, 1)', // Single color
-        borderColor: 'rgba(1, 1, 1, 1)',
-        borderWidth: 1
-      }]
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: true,
-      scales: {
-        y: {
-          beginAtZero: true,
-          min: 0,
-          max: 50,
-          ticks: {
-            // Appends a % symbol to each tick value
-            callback: function(value) {
-              return value + '%';
+  const urljasin =
+    'https://docs.google.com/spreadsheets/d/e/2PACX-1vRCs2o3UQmvIdjsom90rV-nWWACCIyKhfsvCIK3TUiK8qdeyHi9coQnp9w7JCJ5C3JOq52AnjEewivo/pub?gid=1440127812&single=true&output=csv';
+
+  function getPosition(string, subString, index) {
+    return string.split(subString, index).join(subString).length;
+  }
+
+  const data1jasinbpe3 = document.querySelector('#data1jasinbpe3');
+  const data2jasinbpe3 = document.querySelector('#data2jasinbpe3');
+  const data3jasinbpe3 = document.querySelector('#data3jasinbpe3');
+  const data4jasinbpe3 = document.querySelector('#data4jasinbpe3');
+  const data5jasinbpe3 = document.querySelector('#data5jasinbpe3');
+  const data6jasinbpe3 = document.querySelector('#data6jasinbpe3');
+  const data7jasinbpe3 = document.querySelector('#data7jasinbpe3');
+  const data8jasinbpe3 = document.querySelector('#data8jasinbpe3');
+  const data1jasinbpe4 = document.querySelector('#data1jasinbpe4');
+  const data2jasinbpe4 = document.querySelector('#data2jasinbpe4');
+  const data3jasinbpe4 = document.querySelector('#data3jasinbpe4');
+  const data4jasinbpe4 = document.querySelector('#data4jasinbpe4');
+  const data5jasinbpe4 = document.querySelector('#data5jasinbpe4');
+  const data6jasinbpe4 = document.querySelector('#data6jasinbpe4');
+  const data7jasinbpe4 = document.querySelector('#data7jasinbpe4');
+  const data8jasinbpe4 = document.querySelector('#data8jasinbpe4');
+  const data9jasinbpe4 = document.querySelector('#data9jasinbpe4');
+  const data10jasinbpe4 = document.querySelector('#data10jasinbpe4');
+  const data11jasinbpe4 = document.querySelector('#data11jasinbpe4');
+  const data12jasinbpe4 = document.querySelector('#data12jasinbpe4');
+ 
+  data1jasinbpe3.innerHTML = '<p>Loading...</p>';
+  data2jasinbpe3.innerHTML = '<p>Loading...</p>';
+  data3jasinbpe3.innerHTML = '<p>Loading...</p>';
+  data4jasinbpe3.innerHTML = '<p>Loading...</p>';
+  data5jasinbpe3.innerHTML = '<p>Loading...</p>';
+  data6jasinbpe3.innerHTML = '<p>Loading...</p>';
+  data7jasinbpe3.innerHTML = '<p>Loading...</p>';
+  data8jasinbpe3.innerHTML = '<p>Loading...</p>';
+  data1jasinbpe4.innerHTML = '<p>Loading...</p>';
+  data2jasinbpe4.innerHTML = '<p>Loading...</p>';
+  data3jasinbpe4.innerHTML = '<p>Loading...</p>';
+  data4jasinbpe4.innerHTML = '<p>Loading...</p>';
+  data5jasinbpe4.innerHTML = '<p>Loading...</p>';
+  data6jasinbpe4.innerHTML = '<p>Loading...</p>';
+  data7jasinbpe4.innerHTML = '<p>Loading...</p>';
+  data8jasinbpe4.innerHTML = '<p>Loading...</p>';
+  data9jasinbpe4.innerHTML = '<p>Loading...</p>';
+  data10jasinbpe4.innerHTML = '<p>Loading...</p>';
+  data11jasinbpe4.innerHTML = '<p>Loading...</p>';
+  data12jasinbpe4.innerHTML = '<p>Loading...</p>';  
+
+  fetch(urljasin)
+    .then((result) => result.text())
+    .then(function (csvtext) { 
+      data1jasinbpe3.innerHTML = csvtext.substring(
+      getPosition(csvtext,',',41)+1,getPosition(csvtext,',',42),);
+      data2jasinbpe3.innerHTML = csvtext.substring(
+      getPosition(csvtext,',',42)+1,getPosition(csvtext,',',43),);
+      data3jasinbpe3.innerHTML = csvtext.substring(
+      getPosition(csvtext,',',43)+1,getPosition(csvtext,',',44),);
+      data4jasinbpe3.innerHTML = csvtext.substring(
+      getPosition(csvtext,',',44)+1,getPosition(csvtext,',',45),);
+      data5jasinbpe3.innerHTML = csvtext.substring(
+      getPosition(csvtext,',',45)+1,getPosition(csvtext,',',46),);
+      data6jasinbpe3.innerHTML = csvtext.substring(
+      getPosition(csvtext,',',46)+1,getPosition(csvtext,',',47),);
+      data7jasinbpe3.innerHTML = csvtext.substring(
+      getPosition(csvtext,',',47)+1,getPosition(csvtext,',',48),);
+      data8jasinbpe3.innerHTML = csvtext.substring(
+      getPosition(csvtext,',',48)+1,getPosition(csvtext,',',49),);
+      data1jasinbpe4.innerHTML = csvtext.substring(
+      getPosition(csvtext,',',114)+1,getPosition(csvtext,',',115),);
+      data2jasinbpe4.innerHTML = csvtext.substring(
+      getPosition(csvtext,',',115)+1,getPosition(csvtext,',',116),);
+      data3jasinbpe4.innerHTML = csvtext.substring(
+      getPosition(csvtext,',',116)+1,getPosition(csvtext,',',117),);
+      data4jasinbpe4.innerHTML = csvtext.substring(
+      getPosition(csvtext,',',117)+1,getPosition(csvtext,',',118),);
+      data5jasinbpe4.innerHTML = csvtext.substring(
+      getPosition(csvtext,',',118)+1,getPosition(csvtext,',',119),);
+      data6jasinbpe4.innerHTML = csvtext.substring(
+      getPosition(csvtext,',',119)+1,getPosition(csvtext,',',120),);
+      data7jasinbpe4.innerHTML = csvtext.substring(
+      getPosition(csvtext,',',120)+1,getPosition(csvtext,',',121),);
+      data8jasinbpe4.innerHTML = csvtext.substring(
+      getPosition(csvtext,',',121)+1,getPosition(csvtext,',',122),);
+      data9jasinbpe4.innerHTML = csvtext.substring(
+      getPosition(csvtext,',',122)+1,getPosition(csvtext,',',123),);
+      data10jasinbpe4.innerHTML = csvtext.substring(
+      getPosition(csvtext,',',123)+1,getPosition(csvtext,',',124),);
+      data11jasinbpe4.innerHTML = csvtext.substring(
+      getPosition(csvtext,',',124)+1,getPosition(csvtext,',',125),);
+      data12jasinbpe4.innerHTML = csvtext.substring(
+      getPosition(csvtext,',',125)+1,getPosition(csvtext,',',126),);
+      data13jasinbpe4.innerHTML = csvtext.substring(
+      getPosition(csvtext,',',125)+1,getPosition(csvtext,',',126),);
+      data1 = [ 
+        parseFloat(csvtext.substring(getPosition(csvtext,',',168)+1,getPosition(csvtext,',',169),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',169)+1,getPosition(csvtext,',',170),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',170)+1,getPosition(csvtext,',',171),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',171)+1,getPosition(csvtext,',',172),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',172)+1,getPosition(csvtext,',',173),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',173)+1,getPosition(csvtext,',',174),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',174)+1,getPosition(csvtext,',',175),))];
+      data2 = [ 
+        parseFloat(csvtext.substring(getPosition(csvtext,',',241)+1,getPosition(csvtext,',',242),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',242)+1,getPosition(csvtext,',',243),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',243)+1,getPosition(csvtext,',',244),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',244)+1,getPosition(csvtext,',',245),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',245)+1,getPosition(csvtext,',',246),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',246)+1,getPosition(csvtext,',',247),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',247)+1,getPosition(csvtext,',',248),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',248)+1,getPosition(csvtext,',',249),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',249)+1,getPosition(csvtext,',',250),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',250)+1,getPosition(csvtext,',',251),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',251)+1,getPosition(csvtext,',',252),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',252)+1,getPosition(csvtext,',',253),))];
+
+        theChartJasinBPE3 = new Chart(chartJasinBPE3, {
+          type: 'bar',
+          data: {
+            labels: ['Penskaleran', 'Penilaian pertama', 'Penilaian kedua', 'Penilaian ketiga', 'Penurunan Skor BPE', 'Peningkatan Skor BPE', 'Dirujuk'],
+              datasets: [{
+              label: 'Peratus',
+              data: data1,
+              backgroundColor: 'rgba(0, 255, 0, 1)', // Single color
+              borderColor: 'rgba(1, 1, 1, 1)',
+              borderWidth: 1
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: true,
+            scales: {
+              y: {
+                beginAtZero: true,
+                ticks: {
+                  // Appends a % symbol to each tick value
+                  callback: function(value) {
+                  return value + '%';
+                  }
+                }
+              }
+            },
+            plugins:{
+              legend: {
+                display: false
+              },
+              title: {
+                display: false,
+                text: 'Pesakit Skor BPE 3',
+                font: {
+                  size: 24
+                }
+              }
+            },
+            tooltips: {
+              callbacks: {
+                label: function(tooltipItem) {
+                  return tooltipItem.yLabel;
+                }
+              }
             }
           }
-        }
-      },
-      plugins:{
-        legend: {
-          display: false
-        },
-        title: {
-          display: true,
-          text: 'Pesakit Skor BPE 3',
-          font: {
-            size: 24
-          }
-        }
-      },
-      tooltips: {
-        callbacks: {
-           label: function(tooltipItem) {
+        });
+
+        theChartJasinBPE4 = new Chart(chartJasinBPE4, {
+          type: 'bar',
+          data: {
+            labels: ['Pesakit enggan', 'Pesakit minta masa', 'Rawatan Susulan', 'Indikasi Rawatan Lain', 'Masalah logistik', 'Keadaan pesakit', 'Pesakit menetap negeri lain', 'Bawah unit perio', 'Tidak hadir temujanji', 'Kekangan Masa', 'Tiada sebab', 'Dirujuk'],
+              datasets: [{
+              label: 'Peratus',
+              data: data2,
+              backgroundColor: 'rgba(0, 255, 0, 1)', // Single color
+              borderColor: 'rgba(1, 1, 1, 1)',
+              borderWidth: 1
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: true,
+            scales: {
+              y: {
+                beginAtZero: true,
+                ticks: {
+                  // Appends a % symbol to each tick value
+                  callback: function(value) {
+                  return value + '%';
+                  }
+                }
+              }
+            },
+            plugins:{
+              legend: {
+                display: false
+              },
+              title: {
+                display: false,
+                text: 'Pesakit Skor BPE 3',
+                font: {
+                  size: 24
+                }
+              }
+            },
+            tooltips: {
+              callbacks: {
+                label: function(tooltipItem) {
                   return tooltipItem.yLabel;
-           }
-        }
-      }
-    }
-  });
+                }
+              }
+            }
+          }
+        });
+    });
+ 
+  selectYear = document.querySelector('#yearJasin');
+  selectFacility = document.querySelector('#facilityJasin');
 
-  function createChart(theData) {
+  function updateChart(input1,input2,texttoremove) {
 
-  //   theChart.destroy();
-  //   theChart = new Chart(ctx, {
-  //   type: 'bar',
-  //   data: {
-  //     labels: ['Penskaleran', 'Penilaian pertama', 'Penilaian kedua', 'Penilaian ketiga', 'Penurunan Skor BPE', 'Peningkatan Skor BPE', 'Dirujuk'],
-  //     datasets: [{
-  //       label: 'Peratus',
-  //       data: theData,
-  //       backgroundColor: 'rgba(0, 255, 0, 1)', // Single color
-  //       borderColor: 'rgba(1, 1, 1, 1)',
-  //       borderWidth: 1
-  //     }]
-  //   },
-  //   options: {
-  //     responsive: true,
-  //     maintainAspectRatio: true,
-  //     scales: {
-  //       y: {
-  //         beginAtZero: true,
-  //         min: 0,
-  //         max: 50,
-  //         ticks: {
-  //           // Appends a % symbol to each tick value
-  //           callback: function(value) {
-  //             return value + '%';
-  //           }
-  //         }
-  //       }
-  //     },
-  //     plugins:{
-  //       legend: {
-  //         display: false
-  //       },
-  //       title: {
-  //         display: true,
-  //         text: 'Pesakit Skor BPE 3',
-  //         font: {
-  //           size: 24
-  //         }
-  //       }
-  //     },
-  //     tooltips: {
-  //       callbacks: {
-  //          label: function(tooltipItem) {
-  //                 return tooltipItem.yLabel;
-  //          }
-  //       }
-  //     }
-  //   }
-  // });
+    data1jasinbpe3.innerHTML = '<p>Loading...</p>';
+    data2jasinbpe3.innerHTML = '<p>Loading...</p>';
+    data3jasinbpe3.innerHTML = '<p>Loading...</p>';
+    data4jasinbpe3.innerHTML = '<p>Loading...</p>';
+    data5jasinbpe3.innerHTML = '<p>Loading...</p>';
+    data6jasinbpe3.innerHTML = '<p>Loading...</p>';
+    data7jasinbpe3.innerHTML = '<p>Loading...</p>';
+    data8jasinbpe3.innerHTML = '<p>Loading...</p>';
+    data1jasinbpe4.innerHTML = '<p>Loading...</p>';
+    data2jasinbpe4.innerHTML = '<p>Loading...</p>';
+    data3jasinbpe4.innerHTML = '<p>Loading...</p>';
+    data4jasinbpe4.innerHTML = '<p>Loading...</p>';
+    data5jasinbpe4.innerHTML = '<p>Loading...</p>';
+    data6jasinbpe4.innerHTML = '<p>Loading...</p>';
+    data7jasinbpe4.innerHTML = '<p>Loading...</p>';
+    data8jasinbpe4.innerHTML = '<p>Loading...</p>';
+    data9jasinbpe4.innerHTML = '<p>Loading...</p>';
+    data10jasinbpe4.innerHTML = '<p>Loading...</p>';
+    data11jasinbpe4.innerHTML = '<p>Loading...</p>';
+    data12jasinbpe4.innerHTML = '<p>Loading...</p>';
+    data13jasinbpe4.innerHTML = '<p>Loading...</p>';
+    fetch(urljasin)
+    .then((result) => result.text())
+    .then(function (csvtext) { 
+    data1jasinbpe3.innerHTML = csvtext.substring(
+    getPosition(csvtext,',',input1)+1,getPosition(csvtext,',',input1+1),).replace(texttoremove,"");
+    data2jasinbpe3.innerHTML = csvtext.substring(
+    getPosition(csvtext,',',input1+1)+1,getPosition(csvtext,',',input1+2),).replace(texttoremove,"");
+    data3jasinbpe3.innerHTML = csvtext.substring(
+    getPosition(csvtext,',',input1+2)+1,getPosition(csvtext,',',input1+3),).replace(texttoremove,"");
+    data4jasinbpe3.innerHTML = csvtext.substring(
+    getPosition(csvtext,',',input1+3)+1,getPosition(csvtext,',',input1+4),).replace(texttoremove,"");
+    data5jasinbpe3.innerHTML = csvtext.substring(
+    getPosition(csvtext,',',input1+4)+1,getPosition(csvtext,',',input1+5),).replace(texttoremove,"");
+    data6jasinbpe3.innerHTML = csvtext.substring(
+    getPosition(csvtext,',',input1+5)+1,getPosition(csvtext,',',input1+6),).replace(texttoremove,"")
+    data7jasinbpe3.innerHTML = csvtext.substring(
+    getPosition(csvtext,',',input1+6)+1,getPosition(csvtext,',',input1+7),).replace(texttoremove,"");
+    data8jasinbpe3.innerHTML = csvtext.substring(
+    getPosition(csvtext,',',input1+7)+1,getPosition(csvtext,',',input1+8),).replace(texttoremove,"");
+    data1jasinbpe4.innerHTML = csvtext.substring(
+    getPosition(csvtext,',',input2)+1,getPosition(csvtext,',',input2+1),).replace(texttoremove,"");
+    data2jasinbpe4.innerHTML = csvtext.substring(
+    getPosition(csvtext,',',input2+1)+1,getPosition(csvtext,',',input2+2),).replace(texttoremove,"");
+    data3jasinbpe4.innerHTML = csvtext.substring(
+    getPosition(csvtext,',',input2+2)+1,getPosition(csvtext,',',input2+3),).replace(texttoremove,"");
+    data4jasinbpe4.innerHTML = csvtext.substring(
+    getPosition(csvtext,',',input2+3)+1,getPosition(csvtext,',',input2+4),).replace(texttoremove,"");
+    data5jasinbpe4.innerHTML = csvtext.substring(
+    getPosition(csvtext,',',input2+4)+1,getPosition(csvtext,',',input2+5),).replace(texttoremove,"");
+    data6jasinbpe4.innerHTML = csvtext.substring(
+    getPosition(csvtext,',',input2+5)+1,getPosition(csvtext,',',input2+6),).replace(texttoremove,"");
+    data7jasinbpe4.innerHTML = csvtext.substring(
+    getPosition(csvtext,',',inpu2+6)+1,getPosition(csvtext,',',input2+7),).replace(texttoremove,"");
+    data8jasinbpe4.innerHTML = csvtext.substring(
+    getPosition(csvtext,',',input2+7)+1,getPosition(csvtext,',',input2+8),).replace(texttoremove,"");
+    data9jasinbpe4.innerHTML = csvtext.substring(
+    getPosition(csvtext,',',input2+8)+1,getPosition(csvtext,',',input2+9),).replace(texttoremove,"");
+    data10jasinbpe4.innerHTML = csvtext.substring(
+    getPosition(csvtext,',',input2+9)+1,getPosition(csvtext,',',input2+10),).replace(texttoremove,"");
+    data11jasinbpe4.innerHTML = csvtext.substring(
+    getPosition(csvtext,',',input2+10)+1,getPosition(csvtext,',',input2+11),).replace(texttoremove,"");
+    data12jasinbpe4.innerHTML = csvtext.substring(
+    getPosition(csvtext,',',input2+11)+1,getPosition(csvtext,',',input2+12),).replace(texttoremove,"");
+    data13jasinbpe4.innerHTML = csvtext.substring(
+    getPosition(csvtext,',',input2+12)+1,getPosition(csvtext,',',input2+13),).replace(texttoremove,"");
 
-    theChart.data.datasets[0].data = theData;
-    theChart.update();
+    data1 = [ 
+      parseFloat(csvtext.substring(getPosition(csvtext,',',input+127)+1,getPosition(csvtext,',',input+128),)),
+      parseFloat(csvtext.substring(getPosition(csvtext,',',input+128)+1,getPosition(csvtext,',',input+129),)),
+      parseFloat(csvtext.substring(getPosition(csvtext,',',input+129)+1,getPosition(csvtext,',',input+130),)),
+      parseFloat(csvtext.substring(getPosition(csvtext,',',input+130)+1,getPosition(csvtext,',',input+131),)),
+      parseFloat(csvtext.substring(getPosition(csvtext,',',input+131)+1,getPosition(csvtext,',',input+132),)),
+      parseFloat(csvtext.substring(getPosition(csvtext,',',input+132)+1,getPosition(csvtext,',',input+133),)),
+      parseFloat(csvtext.substring(getPosition(csvtext,',',input+133)+1,getPosition(csvtext,',',input+134),))];
+    data2 = [ 
+      parseFloat(csvtext.substring(getPosition(csvtext,',',input+200)+1,getPosition(csvtext,',',input+201),)),
+      parseFloat(csvtext.substring(getPosition(csvtext,',',input+201)+1,getPosition(csvtext,',',input+202),)),
+      parseFloat(csvtext.substring(getPosition(csvtext,',',input+202)+1,getPosition(csvtext,',',input+203),)),
+      parseFloat(csvtext.substring(getPosition(csvtext,',',input+203)+1,getPosition(csvtext,',',input+204),)),
+      parseFloat(csvtext.substring(getPosition(csvtext,',',input+204)+1,getPosition(csvtext,',',input+205),)),
+      parseFloat(csvtext.substring(getPosition(csvtext,',',input+205)+1,getPosition(csvtext,',',input+206),)),
+      parseFloat(csvtext.substring(getPosition(csvtext,',',input+206)+1,getPosition(csvtext,',',input+207),)),
+      parseFloat(csvtext.substring(getPosition(csvtext,',',input+207)+1,getPosition(csvtext,',',input+208),)),
+      parseFloat(csvtext.substring(getPosition(csvtext,',',input+208)+1,getPosition(csvtext,',',input+209),)),
+      parseFloat(csvtext.substring(getPosition(csvtext,',',input+209)+1,getPosition(csvtext,',',input+210),)),
+      parseFloat(csvtext.substring(getPosition(csvtext,',',input+210)+1,getPosition(csvtext,',',input+211),)),
+      parseFloat(csvtext.substring(getPosition(csvtext,',',input+211)+1,getPosition(csvtext,',',input+212),))];
+    console.log(data1);
+    console.log(data2);
+    theChartJasinBPE3.data.datasets[0].data = data1;
+    theChartJasinBPE3.update();
+    theChartJasinBPE4.data.datasets[0].data = data2;
+    theChartJasinBPE4.update();
+      })
 
   }
 
-  function testDrop() {
+  function changeDropJasin() {
+
     console.log(selectYear.value)
+    console.log(selectFacility.value)
+
     if (selectYear.value == 2026) {
-      createChart(data2);
-      console.log("c2026");
+
+      if (selectFacility.value == "DJ") {
+
+        input1 = 41;
+        input2 = 114;
+
+      } else if (selectFacility.value == "KPJ") {
+
+        input1 = 1;
+        input2 = 49;
+
+      } else if (selectFacility.value == "KPM") {
+
+        input1 = 9;
+        input2 = 62;
+
+      } else if (selectFacility.value == "KPU") {
+
+        input1 = 17;
+        input2 = 75;
+
+      } else if (selectFacility.value == "KPS") {
+
+        input1 = 25;
+        input2 = 88;
+
+      } else if (selectFacility.value == "KPSB") {
+
+        input1 = 33;
+        input2 = 101;
+
+      }
+
+      texttoremove = "year 2026"
+      console.log(input1);
+      console.log(input2);
+      console.log(texttoremove);
+      updateChart(input1,input2,texttoremove);
+
     } else if (selectYear.value == 2025) {
-      createChart(data1);
-      console.log("c2025");
+
+      if (selectFacility.value == "DJ") {
+
+        input1 = 293;
+        input2 = 366;
+
+      } else if (selectFacility.value == "KPJ") {
+
+        input1 = 253;
+        input2 = 301;
+
+      } else if (selectFacility.value == "KPM") {
+
+        input1 = 261;
+        input2 = 314;
+
+      } else if (selectFacility.value == "KPU") {
+
+        input1 = 269;
+        input2 = 327;
+
+      } else if (selectFacility.value == "KPS") {
+
+        input1 = 277;
+        input2 = 340;
+
+      } else if (selectFacility.value == "KPSB") {
+
+        input1 = 285;
+        input2 = 353;
+
+      }
+
+      texttoremove = "year 2025"
+      console.log(input1);
+      console.log(input2);
+      console.log(texttoremove);
+      updateChart(input1,input2,texttoremove);
+
     }
+
   }
 
 </script>
