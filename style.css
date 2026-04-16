@@ -1304,3 +1304,53 @@ span.a {
     translate: 0 -1vh;
   }
 }
+
+@media screen and (max-width: 950px) {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    font-size: 0.7rem;
+  }
+  .chartTitle {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  label,
+  select {
+    font-size: 0.7rem;
+  }
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    font-size: 0.5rem;
+  }
+  .chartTitle {
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  label,
+  select {
+    font-size: 0.5rem;
+  }
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    font-size: 0.25rem;
+  }
+  .chartTitle {
+    font-size: 0.4rem;
+  }
+}

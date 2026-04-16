@@ -929,7 +929,7 @@ document.querySelector(".rotatekpmasjidtanah").addEventListener("click", functio
       data12jasinbpe4.innerHTML = csvtext.substring(
       getPosition(csvtext,',',125)+1,getPosition(csvtext,',',126),);
       data13jasinbpe4.innerHTML = csvtext.substring(
-      getPosition(csvtext,',',126)+1,getPosition(csvtext,',',127),);
+      getPosition(csvtext,',',126)+1,getPosition(csvtext,',',127),).replace("year 2026","");
       data1 = [ 
         parseFloat(csvtext.substring(getPosition(csvtext,',',168)+1,getPosition(csvtext,',',169),)),
         parseFloat(csvtext.substring(getPosition(csvtext,',',169)+1,getPosition(csvtext,',',170),)),
@@ -950,7 +950,7 @@ document.querySelector(".rotatekpmasjidtanah").addEventListener("click", functio
         parseFloat(csvtext.substring(getPosition(csvtext,',',249)+1,getPosition(csvtext,',',250),)),
         parseFloat(csvtext.substring(getPosition(csvtext,',',250)+1,getPosition(csvtext,',',251),)),
         parseFloat(csvtext.substring(getPosition(csvtext,',',251)+1,getPosition(csvtext,',',252),)),
-        parseFloat(csvtext.substring(getPosition(csvtext,',',252)+1,getPosition(csvtext,',',253),))];
+        parseFloat(csvtext.substring(getPosition(csvtext,',',252)+1,getPosition(csvtext,',',253),).replace("year 2026",""))];
 
         theChartJasinBPE3 = new Chart(chartJasinBPE3, {
           type: 'bar',
@@ -1122,26 +1122,26 @@ document.querySelector(".rotatekpmasjidtanah").addEventListener("click", functio
     getPosition(csvtext,',',input2+12)+1,getPosition(csvtext,',',input2+13),).replace(texttoremove,"");
 
     data1 = [ 
-      parseFloat(csvtext.substring(getPosition(csvtext,',',input1+127)+1,getPosition(csvtext,',',input1+128),)),
-      parseFloat(csvtext.substring(getPosition(csvtext,',',input1+128)+1,getPosition(csvtext,',',input1+129),)),
-      parseFloat(csvtext.substring(getPosition(csvtext,',',input1+129)+1,getPosition(csvtext,',',input1+130),)),
-      parseFloat(csvtext.substring(getPosition(csvtext,',',input1+130)+1,getPosition(csvtext,',',input1+131),)),
-      parseFloat(csvtext.substring(getPosition(csvtext,',',input1+131)+1,getPosition(csvtext,',',input1+132),)),
-      parseFloat(csvtext.substring(getPosition(csvtext,',',input1+132)+1,getPosition(csvtext,',',input1+133),)),
-      parseFloat(csvtext.substring(getPosition(csvtext,',',input1+133)+1,getPosition(csvtext,',',input1+134),))];
+      parseFloat(csvtext.substring(getPosition(csvtext,',',input1+127)+1,getPosition(csvtext,',',input1+128),).replace(texttoremove,"")),
+      parseFloat(csvtext.substring(getPosition(csvtext,',',input1+128)+1,getPosition(csvtext,',',input1+129),).replace(texttoremove,"")),
+      parseFloat(csvtext.substring(getPosition(csvtext,',',input1+129)+1,getPosition(csvtext,',',input1+130),).replace(texttoremove,"")),
+      parseFloat(csvtext.substring(getPosition(csvtext,',',input1+130)+1,getPosition(csvtext,',',input1+131),).replace(texttoremove,"")),
+      parseFloat(csvtext.substring(getPosition(csvtext,',',input1+131)+1,getPosition(csvtext,',',input1+132),).replace(texttoremove,"")),
+      parseFloat(csvtext.substring(getPosition(csvtext,',',input1+132)+1,getPosition(csvtext,',',input1+133),).replace(texttoremove,"")),
+      parseFloat(csvtext.substring(getPosition(csvtext,',',input1+133)+1,getPosition(csvtext,',',input1+134),).replace(texttoremove,""))];
     data2 = [ 
-      parseFloat(csvtext.substring(getPosition(csvtext,',',input2+200)+1,getPosition(csvtext,',',input2+201),)),
-      parseFloat(csvtext.substring(getPosition(csvtext,',',input2+201)+1,getPosition(csvtext,',',input2+202),)),
-      parseFloat(csvtext.substring(getPosition(csvtext,',',input2+202)+1,getPosition(csvtext,',',input2+203),)),
-      parseFloat(csvtext.substring(getPosition(csvtext,',',input2+203)+1,getPosition(csvtext,',',input2+204),)),
-      parseFloat(csvtext.substring(getPosition(csvtext,',',input2+204)+1,getPosition(csvtext,',',input2+205),)),
-      parseFloat(csvtext.substring(getPosition(csvtext,',',input2+205)+1,getPosition(csvtext,',',input2+206),)),
-      parseFloat(csvtext.substring(getPosition(csvtext,',',input2+206)+1,getPosition(csvtext,',',input2+207),)),
-      parseFloat(csvtext.substring(getPosition(csvtext,',',input2+207)+1,getPosition(csvtext,',',input2+208),)),
-      parseFloat(csvtext.substring(getPosition(csvtext,',',input2+208)+1,getPosition(csvtext,',',input2+209),)),
-      parseFloat(csvtext.substring(getPosition(csvtext,',',input2+209)+1,getPosition(csvtext,',',input2+210),)),
-      parseFloat(csvtext.substring(getPosition(csvtext,',',input2+210)+1,getPosition(csvtext,',',input2+211),)),
-      parseFloat(csvtext.substring(getPosition(csvtext,',',input2+211)+1,getPosition(csvtext,',',input2+212),))];
+      parseFloat(csvtext.substring(getPosition(csvtext,',',input2+127)+1,getPosition(csvtext,',',input2+128),).replace(texttoremove,"")),
+      parseFloat(csvtext.substring(getPosition(csvtext,',',input2+128)+1,getPosition(csvtext,',',input2+129),).replace(texttoremove,"")),
+      parseFloat(csvtext.substring(getPosition(csvtext,',',input2+129)+1,getPosition(csvtext,',',input2+130),).replace(texttoremove,"")),
+      parseFloat(csvtext.substring(getPosition(csvtext,',',input2+130)+1,getPosition(csvtext,',',input2+131),).replace(texttoremove,"")),
+      parseFloat(csvtext.substring(getPosition(csvtext,',',input2+131)+1,getPosition(csvtext,',',input2+132),).replace(texttoremove,"")),
+      parseFloat(csvtext.substring(getPosition(csvtext,',',input2+132)+1,getPosition(csvtext,',',input2+133),).replace(texttoremove,"")),
+      parseFloat(csvtext.substring(getPosition(csvtext,',',input2+133)+1,getPosition(csvtext,',',input2+134),).replace(texttoremove,"")),
+      parseFloat(csvtext.substring(getPosition(csvtext,',',input2+134)+1,getPosition(csvtext,',',input2+135),).replace(texttoremove,"")),
+      parseFloat(csvtext.substring(getPosition(csvtext,',',input2+135)+1,getPosition(csvtext,',',input2+136),).replace(texttoremove,"")),
+      parseFloat(csvtext.substring(getPosition(csvtext,',',input2+136)+1,getPosition(csvtext,',',input2+137),).replace(texttoremove,"")),
+      parseFloat(csvtext.substring(getPosition(csvtext,',',input2+137)+1,getPosition(csvtext,',',input2+138),).replace(texttoremove,"")),
+      parseFloat(csvtext.substring(getPosition(csvtext,',',input2+138)+1,getPosition(csvtext,',',input2+139),).replace(texttoremove,""))];
     console.log(data1);
     console.log(data2);
     theChartJasinBPE3.data.datasets[0].data = data1;
