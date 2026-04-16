@@ -825,7 +825,31 @@ document.querySelector(".rotatekputc").addEventListener("click", function () {
 document.querySelector(".rotatekpjasin").addEventListener("click", function () {
   this.classList.toggle("downjasin");
   document.querySelector(".kpjasinid").classList.toggle("kpjasinidshow");
-
+  input1 = 1;
+  input2 = 49;
+  console.log(input1 + " " + input2);
+  data1bpe3 = document.querySelector('#data1kpjbpe3');
+  data2bpe3 = document.querySelector('#data2kpjbpe3');
+  data3bpe3 = document.querySelector('#data3kpjbpe3');
+  data4bpe3 = document.querySelector('#data4kpjbpe3');
+  data5bpe3 = document.querySelector('#data5kpjbpe3');
+  data6bpe3 = document.querySelector('#data6kpjbpe3');
+  data7bpe3 = document.querySelector('#data7kpjbpe3');
+  data8bpe3 = document.querySelector('#data8kpjbpe3');
+  data1bpe4 = document.querySelector('#data1kpjbpe4');
+  data2bpe4 = document.querySelector('#data2kpjbpe4');
+  data3bpe4 = document.querySelector('#data3kpjbpe4');
+  data4bpe4 = document.querySelector('#data4kpjbpe4');
+  data5bpe4 = document.querySelector('#data5kpjbpe4');
+  data6bpe4 = document.querySelector('#data6kpjbpe4');
+  data7bpe4 = document.querySelector('#data7kpjbpe4');
+  data8bpe4 = document.querySelector('#data8kpjbpe4');
+  data9bpe4 = document.querySelector('#data9kpjbpe4');
+  data10bpe4 = document.querySelector('#data10kpjbpe4');
+  data11bpe4 = document.querySelector('#data11kpjbpe4');
+  data12bpe4 = document.querySelector('#data12kpjbpe4');
+  data13bpe4 = document.querySelector('#data13kpjbpe4');
+  buildKPTable(input1,input2,data1bpe3,data2bpe3,data3bpe3,data4bpe3,data5bpe3,data6bpe3,data7bpe3,data8bpe3,data1bpe4,data2bpe4,data3bpe4,data4bpe4,data5bpe4,data6bpe4,data7bpe4,data8bpe4,data9bpe4,data10bpe4,data11bpe4,data12bpe4,data13bpe4) 
 });
 
 document.querySelector(".rotatekpumbai").addEventListener("click", function () {
@@ -1210,6 +1234,76 @@ document.querySelector(".rotatekpmasjidtanah").addEventListener("click", functio
     theChartJasinBPE4.update();
       })
 
+  }
+
+  function buildKPTable(input1,input2,data1bpe3,data2bpe3,data3bpe3,data4bpe3,data5bpe3,data6bpe3,data7bpe3,data8bpe3,data1bpe4,data2bpe4,data3bpe4,data4bpe4,data5bpe4,data6bpe4,data7bpe4,data8bpe4,data9bpe4,data10bpe4,data11bpe4,data12bpe4,data13bpe4) {
+    data1bpe3.innerHTML = '<p>Loading...</p>';
+    data2bpe3.innerHTML = '<p>Loading...</p>';
+    data3bpe3.innerHTML = '<p>Loading...</p>';
+    data4bpe3.innerHTML = '<p>Loading...</p>';
+    data5bpe3.innerHTML = '<p>Loading...</p>';
+    data6bpe3.innerHTML = '<p>Loading...</p>';
+    data7bpe3.innerHTML = '<p>Loading...</p>';
+    data8bpe3.innerHTML = '<p>Loading...</p>';
+    data1bpe4.innerHTML = '<p>Loading...</p>';
+    data2bpe4.innerHTML = '<p>Loading...</p>';
+    data3bpe4.innerHTML = '<p>Loading...</p>';
+    data4bpe4.innerHTML = '<p>Loading...</p>';
+    data5bpe4.innerHTML = '<p>Loading...</p>';
+    data6bpe4.innerHTML = '<p>Loading...</p>';
+    data7bpe4.innerHTML = '<p>Loading...</p>';
+    data8bpe4.innerHTML = '<p>Loading...</p>';
+    data9bpe4.innerHTML = '<p>Loading...</p>';
+    data10bpe4.innerHTML = '<p>Loading...</p>';
+    data11bpe4.innerHTML = '<p>Loading...</p>';
+    data12bpe4.innerHTML = '<p>Loading...</p>';
+    data13bpe4.innerHTML = '<p>Loading...</p>';
+    fetch(urljasin)
+    .then((result) => result.text())
+    .then(function (csvtext) { 
+    data1bpe3.innerHTML = csvtext.substring(
+    getPosition(csvtext,',',input1)+1,getPosition(csvtext,',',input1+1),).replace(texttoremove,"");
+    data2bpe3.innerHTML = csvtext.substring(
+    getPosition(csvtext,',',input1+1)+1,getPosition(csvtext,',',input1+2),).replace(texttoremove,"");
+    data3bpe3.innerHTML = csvtext.substring(
+    getPosition(csvtext,',',input1+2)+1,getPosition(csvtext,',',input1+3),).replace(texttoremove,"");
+    data4bpe3.innerHTML = csvtext.substring(
+    getPosition(csvtext,',',input1+3)+1,getPosition(csvtext,',',input1+4),).replace(texttoremove,"");
+    data5bpe3.innerHTML = csvtext.substring(
+    getPosition(csvtext,',',input1+4)+1,getPosition(csvtext,',',input1+5),).replace(texttoremove,"");
+    data6bpe3.innerHTML = csvtext.substring(
+    getPosition(csvtext,',',input1+5)+1,getPosition(csvtext,',',input1+6),).replace(texttoremove,"")
+    data7bpe3.innerHTML = csvtext.substring(
+    getPosition(csvtext,',',input1+6)+1,getPosition(csvtext,',',input1+7),).replace(texttoremove,"");
+    data8bpe3.innerHTML = csvtext.substring(
+    getPosition(csvtext,',',input1+7)+1,getPosition(csvtext,',',input1+8),).replace(texttoremove,"");
+    data1bpe4.innerHTML = csvtext.substring(
+    getPosition(csvtext,',',input2)+1,getPosition(csvtext,',',input2+1),).replace(texttoremove,"");
+    data2bpe4.innerHTML = csvtext.substring(
+    getPosition(csvtext,',',input2+1)+1,getPosition(csvtext,',',input2+2),).replace(texttoremove,"");
+    data3bpe4.innerHTML = csvtext.substring(
+    getPosition(csvtext,',',input2+2)+1,getPosition(csvtext,',',input2+3),).replace(texttoremove,"");
+    data4bpe4.innerHTML = csvtext.substring(
+    getPosition(csvtext,',',input2+3)+1,getPosition(csvtext,',',input2+4),).replace(texttoremove,"");
+    data5bpe4.innerHTML = csvtext.substring(
+    getPosition(csvtext,',',input2+4)+1,getPosition(csvtext,',',input2+5),).replace(texttoremove,"");
+    data6bpe4.innerHTML = csvtext.substring(
+    getPosition(csvtext,',',input2+5)+1,getPosition(csvtext,',',input2+6),).replace(texttoremove,"");
+    data7bpe4.innerHTML = csvtext.substring(
+    getPosition(csvtext,',',input2+6)+1,getPosition(csvtext,',',input2+7),).replace(texttoremove,"");
+    data8bpe4.innerHTML = csvtext.substring(
+    getPosition(csvtext,',',input2+7)+1,getPosition(csvtext,',',input2+8),).replace(texttoremove,"");
+    data9bpe4.innerHTML = csvtext.substring(
+    getPosition(csvtext,',',input2+8)+1,getPosition(csvtext,',',input2+9),).replace(texttoremove,"");
+    data10bpe4.innerHTML = csvtext.substring(
+    getPosition(csvtext,',',input2+9)+1,getPosition(csvtext,',',input2+10),).replace(texttoremove,"");
+    data11bpe4.innerHTML = csvtext.substring(
+    getPosition(csvtext,',',input2+10)+1,getPosition(csvtext,',',input2+11),).replace(texttoremove,"");
+    data12bpe4.innerHTML = csvtext.substring(
+    getPosition(csvtext,',',input2+11)+1,getPosition(csvtext,',',input2+12),).replace(texttoremove,"");
+    data13bpe4.innerHTML = csvtext.substring(
+    getPosition(csvtext,',',input2+12)+1,getPosition(csvtext,',',input2+13),).replace(texttoremove,"");
+    })
   }
 
   function changeDropJasin() {
