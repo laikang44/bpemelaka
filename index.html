@@ -378,7 +378,7 @@
                    <th>Penilaian Ketiga</th>
                    <th>Penurunan Skor BPE</th>
                    <th>Peningkatan Skor BPE</th>
-                    <th>Dirujuk</th>
+                   <th>Dirujuk</th>
                   </tr>
                   <tr id="datajasinbpe3row">
                     <td id="data1jasinbpe3" class="data1jasinbpe3row"></td>
@@ -1354,6 +1354,10 @@ document.querySelector(".rotatekpmasjidtanah").addEventListener("click", functio
 
   const urljasin =
     'https://docs.google.com/spreadsheets/d/e/2PACX-1vRCs2o3UQmvIdjsom90rV-nWWACCIyKhfsvCIK3TUiK8qdeyHi9coQnp9w7JCJ5C3JOq52AnjEewivo/pub?gid=1440127812&single=true&output=csv';
+  const urlmelakatengah =
+    'https://docs.google.com/spreadsheets/d/e/2PACX-1vSd1OjZcCDvYvSDdN_T78wfxoRE2TM8-jppOIRPVm2CQzvnLlEKs0msa4fJMdlQOuqEtZwbl-iZEgOY/pub?gid=1440127812&single=true&output=csv';
+  const urlalorgajah =
+    'https://docs.google.com/spreadsheets/d/e/2PACX-1vSlYJvWQlcIFt_ZoztdnPR7HtFsTWb4MbRPs4maaJKh5XW10pWbSHFnvsm5PXC9t49EGJ5-EuhDUYlQ/pub?gid=1440127812&single=true&output=csv';
 
   function getPosition(string, subString, index) {
     return string.split(subString, index).join(subString).length;
@@ -1569,42 +1573,42 @@ document.querySelector(".rotatekpmasjidtanah").addEventListener("click", functio
         });
     });
  
-  selectYear = document.querySelector('#yearJasin');
-  selectFacility = document.querySelector('#facilityJasin');
+  selectYearJasin = document.querySelector('#yearJasin');
+  selectFacilityJasin = document.querySelector('#facilityJasin');
 
   function changeDropJasin() {
 
-    console.log(selectYear.value)
-    console.log(selectFacility.value)
+    console.log(selectYearJasin.value)
+    console.log(selectFacilityJasin.value)
 
-    if (selectYear.value == 2026) {
+    if (selectYearJasin.value == 2026) {
 
-      if (selectFacility.value == "DJ") {
+      if (selectFacilityJasin.value == "DJ") {
 
         input1 = 41;
         input2 = 114;
 
-      } else if (selectFacility.value == "KPJ") {
+      } else if (selectFacilityJasin.value == "KPJ") {
 
         input1 = 1;
         input2 = 49;
 
-      } else if (selectFacility.value == "KPM") {
+      } else if (selectFacilityJasin.value == "KPM") {
 
         input1 = 9;
         input2 = 62;
 
-      } else if (selectFacility.value == "KPU") {
+      } else if (selectFacilityJasin.value == "KPU") {
 
         input1 = 17;
         input2 = 75;
 
-      } else if (selectFacility.value == "KPS") {
+      } else if (selectFacilityJasin.value == "KPS") {
 
         input1 = 25;
         input2 = 88;
 
-      } else if (selectFacility.value == "KPSB") {
+      } else if (selectFacilityJasin.value == "KPSB") {
 
         input1 = 33;
         input2 = 101;
@@ -1615,36 +1619,36 @@ document.querySelector(".rotatekpmasjidtanah").addEventListener("click", functio
       console.log(input1);
       console.log(input2);
       console.log(texttoremove);
-      updateChart(input1,input2,texttoremove);
+      updateChartJasin(input1,input2,texttoremove);
 
-    } else if (selectYear.value == 2025) {
+    } else if (selectYearJasin.value == 2025) {
 
-      if (selectFacility.value == "DJ") {
+      if (selectFacilityJasin.value == "DJ") {
 
         input1 = 293;
         input2 = 366;
 
-      } else if (selectFacility.value == "KPJ") {
+      } else if (selectFacilityJasin.value == "KPJ") {
 
         input1 = 253;
         input2 = 301;
 
-      } else if (selectFacility.value == "KPM") {
+      } else if (selectFacilityJasin.value == "KPM") {
 
         input1 = 261;
         input2 = 314;
 
-      } else if (selectFacility.value == "KPU") {
+      } else if (selectFacilityJasin.value == "KPU") {
 
         input1 = 269;
         input2 = 327;
 
-      } else if (selectFacility.value == "KPS") {
+      } else if (selectFacilityJasin.value == "KPS") {
 
         input1 = 277;
         input2 = 340;
 
-      } else if (selectFacility.value == "KPSB") {
+      } else if (selectFacilityJasin.value == "KPSB") {
 
         input1 = 285;
         input2 = 353;
@@ -1655,7 +1659,7 @@ document.querySelector(".rotatekpmasjidtanah").addEventListener("click", functio
       console.log(input1);
       console.log(input2);
       console.log(texttoremove);
-      updateChart(input1,input2,texttoremove);
+      updateChartJasin(input1,input2,texttoremove);
 
     }
 
@@ -1709,6 +1713,262 @@ document.querySelector(".rotatekpmasjidtanah").addEventListener("click", functio
   data12melakatengahbpe4.innerHTML = '<p>Loading...</p>';
   data13melakatengahbpe4.innerHTML = '<p>Loading...</p>';
 
+  fetch(urlmelakatengah)
+    .then((result) => result.text())
+    .then(function (csvtext) { 
+      data1melakatengahbpe3.innerHTML = csvtext.substring(
+      getPosition(csvtext,',',41)+1,getPosition(csvtext,',',42),);
+      data2melakatengahbpe3.innerHTML = csvtext.substring(
+      getPosition(csvtext,',',42)+1,getPosition(csvtext,',',43),);
+      data3melakatengahbpe3.innerHTML = csvtext.substring(
+      getPosition(csvtext,',',43)+1,getPosition(csvtext,',',44),);
+      data4melakatengahbpe3.innerHTML = csvtext.substring(
+      getPosition(csvtext,',',44)+1,getPosition(csvtext,',',45),);
+      data5melakatengahbpe3.innerHTML = csvtext.substring(
+      getPosition(csvtext,',',45)+1,getPosition(csvtext,',',46),);
+      data6melakatengahbpe3.innerHTML = csvtext.substring(
+      getPosition(csvtext,',',46)+1,getPosition(csvtext,',',47),);
+      data7melakatengahbpe3.innerHTML = csvtext.substring(
+      getPosition(csvtext,',',47)+1,getPosition(csvtext,',',48),);
+      data8melakatengahbpe3.innerHTML = csvtext.substring(
+      getPosition(csvtext,',',48)+1,getPosition(csvtext,',',49),);
+      data1melakatengahbpe4.innerHTML = csvtext.substring(
+      getPosition(csvtext,',',114)+1,getPosition(csvtext,',',115),);
+      data2melakatengahbpe4.innerHTML = csvtext.substring(
+      getPosition(csvtext,',',115)+1,getPosition(csvtext,',',116),);
+      data3melakatengahbpe4.innerHTML = csvtext.substring(
+      getPosition(csvtext,',',116)+1,getPosition(csvtext,',',117),);
+      data4melakatengahbpe4.innerHTML = csvtext.substring(
+      getPosition(csvtext,',',117)+1,getPosition(csvtext,',',118),);
+      data5melakatengahbpe4.innerHTML = csvtext.substring(
+      getPosition(csvtext,',',118)+1,getPosition(csvtext,',',119),);
+      data6melakatengahbpe4.innerHTML = csvtext.substring(
+      getPosition(csvtext,',',119)+1,getPosition(csvtext,',',120),);
+      data7melakatengahbpe4.innerHTML = csvtext.substring(
+      getPosition(csvtext,',',120)+1,getPosition(csvtext,',',121),);
+      data8melakatengahbpe4.innerHTML = csvtext.substring(
+      getPosition(csvtext,',',121)+1,getPosition(csvtext,',',122),);
+      data9melakatengahbpe4.innerHTML = csvtext.substring(
+      getPosition(csvtext,',',122)+1,getPosition(csvtext,',',123),);
+      data10melakatengahbpe4.innerHTML = csvtext.substring(
+      getPosition(csvtext,',',123)+1,getPosition(csvtext,',',124),);
+      data11melakatengahbpe4.innerHTML = csvtext.substring(
+      getPosition(csvtext,',',124)+1,getPosition(csvtext,',',125),);
+      data12melakatengahbpe4.innerHTML = csvtext.substring(
+      getPosition(csvtext,',',125)+1,getPosition(csvtext,',',126),);
+      data13melakatengahbpe4.innerHTML = csvtext.substring(
+      getPosition(csvtext,',',126)+1,getPosition(csvtext,',',127),).replace("year 2026","");
+      data1 = [ 
+        parseFloat(csvtext.substring(getPosition(csvtext,',',168)+1,getPosition(csvtext,',',169),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',169)+1,getPosition(csvtext,',',170),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',170)+1,getPosition(csvtext,',',171),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',171)+1,getPosition(csvtext,',',172),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',172)+1,getPosition(csvtext,',',173),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',173)+1,getPosition(csvtext,',',174),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',174)+1,getPosition(csvtext,',',175),))];
+      data2 = [ 
+        parseFloat(csvtext.substring(getPosition(csvtext,',',241)+1,getPosition(csvtext,',',242),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',242)+1,getPosition(csvtext,',',243),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',243)+1,getPosition(csvtext,',',244),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',244)+1,getPosition(csvtext,',',245),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',245)+1,getPosition(csvtext,',',246),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',246)+1,getPosition(csvtext,',',247),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',247)+1,getPosition(csvtext,',',248),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',248)+1,getPosition(csvtext,',',249),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',249)+1,getPosition(csvtext,',',250),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',250)+1,getPosition(csvtext,',',251),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',251)+1,getPosition(csvtext,',',252),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',252)+1,getPosition(csvtext,',',253),).replace("year 2026",""))];
+
+        theChartMelakaTengahBPE3 = new Chart(chartMelakaTengahBPE3, {
+          type: 'bar',
+          data: {
+            labels: ['Penskaleran', 'Penilaian pertama', 'Penilaian kedua', 'Penilaian ketiga', 'Penurunan Skor BPE', 'Peningkatan Skor BPE', 'Dirujuk'],
+              datasets: [{
+              label: 'Peratus',
+              data: data1,
+              backgroundColor: 'rgba(0, 255, 0, 1)', // Single color
+              borderColor: 'rgba(1, 1, 1, 1)',
+              borderWidth: 1
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: true,
+            scales: {
+              y: {
+                beginAtZero: true,
+                ticks: {
+                  // Appends a % symbol to each tick value
+                  callback: function(value) {
+                  return value + '%';
+                  }
+                }
+              }
+            },
+            plugins:{
+              legend: {
+                display: false
+              },
+              title: {
+                display: false,
+                text: 'Pesakit Skor BPE 3',
+                font: {
+                  size: 24
+                }
+              }
+            },
+            tooltips: {
+              callbacks: {
+                label: function(tooltipItem) {
+                  return tooltipItem.yLabel;
+                }
+              }
+            }
+          }
+        });
+
+        theChartMelakaTengahBPE4 = new Chart(chartMelakaTengahBPE4, {
+          type: 'bar',
+          data: {
+            labels: ['Pesakit enggan', 'Pesakit minta masa', 'Rawatan Susulan', 'Indikasi Rawatan Lain', 'Masalah logistik', 'Keadaan pesakit', 'Pesakit menetap negeri lain', 'Bawah unit perio', 'Tidak hadir temujanji', 'Kekangan Masa', 'Tiada sebab', 'Dirujuk'],
+              datasets: [{
+              label: 'Peratus',
+              data: data2,
+              backgroundColor: 'rgba(0, 255, 0, 1)', // Single color
+              borderColor: 'rgba(1, 1, 1, 1)',
+              borderWidth: 1
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: true,
+            scales: {
+              y: {
+                beginAtZero: true,
+                ticks: {
+                  // Appends a % symbol to each tick value
+                  callback: function(value) {
+                  return value + '%';
+                  }
+                }
+              }
+            },
+            plugins:{
+              legend: {
+                display: false
+              },
+              title: {
+                display: false,
+                text: 'Pesakit Skor BPE 3',
+                font: {
+                  size: 24
+                }
+              }
+            },
+            tooltips: {
+              callbacks: {
+                label: function(tooltipItem) {
+                  return tooltipItem.yLabel;
+                }
+              }
+            }
+          }
+        });
+    });
+ 
+  selectYear = document.querySelector('#yearMelakaTengah');
+  selectFacility = document.querySelector('#facilityMelakaTengah');
+
+  function changeDropMelakaTengah() {
+
+    console.log(selectYear.value)
+    console.log(selectFacility.value)
+
+    if (selectYear.value == 2026) {
+
+      if (selectFacility.value == "DMT") {
+
+        input1 = 41;
+        input2 = 114;
+
+      } else if (selectFacility.value == "KPMT") {
+
+        input1 = 1;
+        input2 = 49;
+
+      } else if (selectFacility.value == "KPAK") {
+
+        input1 = 9;
+        input2 = 62;
+
+      } else if (selectFacility.value == "KPU") {
+
+        input1 = 17;
+        input2 = 75;
+
+      } else if (selectFacility.value == "KPS") {
+
+        input1 = 25;
+        input2 = 88;
+
+      } else if (selectFacility.value == "KPSB") {
+
+        input1 = 33;
+        input2 = 101;
+
+      }
+
+      // texttoremove = "year 2026"
+      // console.log(input1);
+      // console.log(input2);
+      // console.log(texttoremove);
+      // updateChart(input1,input2,texttoremove);
+
+    } else if (selectYear.value == 2025) {
+
+      if (selectFacility.value == "DMT") {
+
+        input1 = 293;
+        input2 = 366;
+
+      } else if (selectFacility.value == "KPAK") {
+
+        input1 = 253;
+        input2 = 301;
+
+      } else if (selectFacility.value == "KPM") {
+
+        input1 = 261;
+        input2 = 314;
+
+      } else if (selectFacility.value == "KPU") {
+
+        input1 = 269;
+        input2 = 327;
+
+      } else if (selectFacility.value == "KPS") {
+
+        input1 = 277;
+        input2 = 340;
+
+      } else if (selectFacility.value == "KPSB") {
+
+        input1 = 285;
+        input2 = 353;
+
+      }
+
+      // texttoremove = "year 2025"
+      // console.log(input1);
+      // console.log(input2);
+      // console.log(texttoremove);
+      // updateChart(input1,input2,texttoremove);
+
+    }
+
+  }
+
   // end chart melaka tengah
 
   // build chart alor gajah
@@ -1757,11 +2017,267 @@ document.querySelector(".rotatekpmasjidtanah").addEventListener("click", functio
   data12alorgajahbpe4.innerHTML = '<p>Loading...</p>';
   data13alorgajahbpe4.innerHTML = '<p>Loading...</p>';
 
+  fetch(urlalorgajah)
+    .then((result) => result.text())
+    .then(function (csvtext) { 
+      data1alorgajahbpe3.innerHTML = csvtext.substring(
+      getPosition(csvtext,',',41)+1,getPosition(csvtext,',',42),);
+      data2alorgajahbpe3.innerHTML = csvtext.substring(
+      getPosition(csvtext,',',42)+1,getPosition(csvtext,',',43),);
+      data3alorgajahbpe3.innerHTML = csvtext.substring(
+      getPosition(csvtext,',',43)+1,getPosition(csvtext,',',44),);
+      data4alorgajahbpe3.innerHTML = csvtext.substring(
+      getPosition(csvtext,',',44)+1,getPosition(csvtext,',',45),);
+      data5alorgajahbpe3.innerHTML = csvtext.substring(
+      getPosition(csvtext,',',45)+1,getPosition(csvtext,',',46),);
+      data6alorgajahbpe3.innerHTML = csvtext.substring(
+      getPosition(csvtext,',',46)+1,getPosition(csvtext,',',47),);
+      data7alorgajahbpe3.innerHTML = csvtext.substring(
+      getPosition(csvtext,',',47)+1,getPosition(csvtext,',',48),);
+      data8alorgajahbpe3.innerHTML = csvtext.substring(
+      getPosition(csvtext,',',48)+1,getPosition(csvtext,',',49),);
+      data1alorgajahbpe4.innerHTML = csvtext.substring(
+      getPosition(csvtext,',',114)+1,getPosition(csvtext,',',115),);
+      data2alorgajahbpe4.innerHTML = csvtext.substring(
+      getPosition(csvtext,',',115)+1,getPosition(csvtext,',',116),);
+      data3alorgajahbpe4.innerHTML = csvtext.substring(
+      getPosition(csvtext,',',116)+1,getPosition(csvtext,',',117),);
+      data4alorgajahbpe4.innerHTML = csvtext.substring(
+      getPosition(csvtext,',',117)+1,getPosition(csvtext,',',118),);
+      data5alorgajahbpe4.innerHTML = csvtext.substring(
+      getPosition(csvtext,',',118)+1,getPosition(csvtext,',',119),);
+      data6alorgajahbpe4.innerHTML = csvtext.substring(
+      getPosition(csvtext,',',119)+1,getPosition(csvtext,',',120),);
+      data7alorgajahbpe4.innerHTML = csvtext.substring(
+      getPosition(csvtext,',',120)+1,getPosition(csvtext,',',121),);
+      data8alorgajahbpe4.innerHTML = csvtext.substring(
+      getPosition(csvtext,',',121)+1,getPosition(csvtext,',',122),);
+      data9alorgajahbpe4.innerHTML = csvtext.substring(
+      getPosition(csvtext,',',122)+1,getPosition(csvtext,',',123),);
+      data10alorgajahbpe4.innerHTML = csvtext.substring(
+      getPosition(csvtext,',',123)+1,getPosition(csvtext,',',124),);
+      data11alorgajahbpe4.innerHTML = csvtext.substring(
+      getPosition(csvtext,',',124)+1,getPosition(csvtext,',',125),);
+      data12alorgajahbpe4.innerHTML = csvtext.substring(
+      getPosition(csvtext,',',125)+1,getPosition(csvtext,',',126),);
+      data13alorgajahbpe4.innerHTML = csvtext.substring(
+      getPosition(csvtext,',',126)+1,getPosition(csvtext,',',127),).replace("year 2026","");
+      data1 = [ 
+        parseFloat(csvtext.substring(getPosition(csvtext,',',168)+1,getPosition(csvtext,',',169),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',169)+1,getPosition(csvtext,',',170),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',170)+1,getPosition(csvtext,',',171),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',171)+1,getPosition(csvtext,',',172),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',172)+1,getPosition(csvtext,',',173),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',173)+1,getPosition(csvtext,',',174),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',174)+1,getPosition(csvtext,',',175),))];
+      data2 = [ 
+        parseFloat(csvtext.substring(getPosition(csvtext,',',241)+1,getPosition(csvtext,',',242),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',242)+1,getPosition(csvtext,',',243),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',243)+1,getPosition(csvtext,',',244),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',244)+1,getPosition(csvtext,',',245),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',245)+1,getPosition(csvtext,',',246),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',246)+1,getPosition(csvtext,',',247),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',247)+1,getPosition(csvtext,',',248),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',248)+1,getPosition(csvtext,',',249),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',249)+1,getPosition(csvtext,',',250),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',250)+1,getPosition(csvtext,',',251),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',251)+1,getPosition(csvtext,',',252),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',252)+1,getPosition(csvtext,',',253),).replace("year 2026",""))];
+
+        theChartAlorGajahBPE3 = new Chart(chartAlorGajahBPE3, {
+          type: 'bar',
+          data: {
+            labels: ['Penskaleran', 'Penilaian pertama', 'Penilaian kedua', 'Penilaian ketiga', 'Penurunan Skor BPE', 'Peningkatan Skor BPE', 'Dirujuk'],
+              datasets: [{
+              label: 'Peratus',
+              data: data1,
+              backgroundColor: 'rgba(0, 255, 0, 1)', // Single color
+              borderColor: 'rgba(1, 1, 1, 1)',
+              borderWidth: 1
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: true,
+            scales: {
+              y: {
+                beginAtZero: true,
+                ticks: {
+                  // Appends a % symbol to each tick value
+                  callback: function(value) {
+                  return value + '%';
+                  }
+                }
+              }
+            },
+            plugins:{
+              legend: {
+                display: false
+              },
+              title: {
+                display: false,
+                text: 'Pesakit Skor BPE 3',
+                font: {
+                  size: 24
+                }
+              }
+            },
+            tooltips: {
+              callbacks: {
+                label: function(tooltipItem) {
+                  return tooltipItem.yLabel;
+                }
+              }
+            }
+          }
+        });
+
+        theChartAlorGajahBPE4 = new Chart(chartAlorGajahBPE4, {
+          type: 'bar',
+          data: {
+            labels: ['Pesakit enggan', 'Pesakit minta masa', 'Rawatan Susulan', 'Indikasi Rawatan Lain', 'Masalah logistik', 'Keadaan pesakit', 'Pesakit menetap negeri lain', 'Bawah unit perio', 'Tidak hadir temujanji', 'Kekangan Masa', 'Tiada sebab', 'Dirujuk'],
+              datasets: [{
+              label: 'Peratus',
+              data: data2,
+              backgroundColor: 'rgba(0, 255, 0, 1)', // Single color
+              borderColor: 'rgba(1, 1, 1, 1)',
+              borderWidth: 1
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: true,
+            scales: {
+              y: {
+                beginAtZero: true,
+                ticks: {
+                  // Appends a % symbol to each tick value
+                  callback: function(value) {
+                  return value + '%';
+                  }
+                }
+              }
+            },
+            plugins:{
+              legend: {
+                display: false
+              },
+              title: {
+                display: false,
+                text: 'Pesakit Skor BPE 3',
+                font: {
+                  size: 24
+                }
+              }
+            },
+            tooltips: {
+              callbacks: {
+                label: function(tooltipItem) {
+                  return tooltipItem.yLabel;
+                }
+              }
+            }
+          }
+        });
+    });
+ 
+  selectYear = document.querySelector('#yearAlorGajah');
+  selectFacility = document.querySelector('#facilityAlorGajah');
+
+  function changeDropAlorGajah() {
+
+    console.log(selectYear.value)
+    console.log(selectFacility.value)
+
+    if (selectYear.value == 2026) {
+
+      if (selectFacility.value == "DAG") {
+
+        input1 = 41;
+        input2 = 114;
+
+      } else if (selectFacility.value == "KPAG") {
+
+        input1 = 1;
+        input2 = 49;
+
+      } else if (selectFacility.value == "KPDT") {
+
+        input1 = 9;
+        input2 = 62;
+
+      } else if (selectFacility.value == "KPU") {
+
+        input1 = 17;
+        input2 = 75;
+
+      } else if (selectFacility.value == "KPS") {
+
+        input1 = 25;
+        input2 = 88;
+
+      } else if (selectFacility.value == "KPSB") {
+
+        input1 = 33;
+        input2 = 101;
+
+      }
+
+      // texttoremove = "year 2026"
+      // console.log(input1);
+      // console.log(input2);
+      // console.log(texttoremove);
+      // updateChart(input1,input2,texttoremove);
+
+    } else if (selectYear.value == 2025) {
+
+      if (selectFacility.value == "DAG") {
+
+        input1 = 293;
+        input2 = 366;
+
+      } else if (selectFacility.value == "KPAG") {
+
+        input1 = 253;
+        input2 = 301;
+
+      } else if (selectFacility.value == "KPDT") {
+
+        input1 = 261;
+        input2 = 314;
+
+      } else if (selectFacility.value == "KPU") {
+
+        input1 = 269;
+        input2 = 327;
+
+      } else if (selectFacility.value == "KPS") {
+
+        input1 = 277;
+        input2 = 340;
+
+      } else if (selectFacility.value == "KPSB") {
+
+        input1 = 285;
+        input2 = 353;
+
+      }
+
+      // texttoremove = "year 2025"
+      // console.log(input1);
+      // console.log(input2);
+      // console.log(texttoremove);
+      // updateChart(input1,input2,texttoremove);
+
+    }
+
+  }
+
   // end chart alor gajah
 
   // update function
 
-  function updateChart(input1,input2,texttoremove) {
+  function updateChartJasin(input1,input2,texttoremove) {
 
     data1jasinbpe3.innerHTML = '<p>Loading...</p>';
     data2jasinbpe3.innerHTML = '<p>Loading...</p>';
@@ -1860,6 +2376,8 @@ document.querySelector(".rotatekpmasjidtanah").addEventListener("click", functio
       })
 
   }
+
+    // end update function
 
   function buildKPTable(input1,input2,data1bpe3,data2bpe3,data3bpe3,data4bpe3,data5bpe3,data6bpe3,data7bpe3,data8bpe3,data1bpe4,data2bpe4,data3bpe4,data4bpe4,data5bpe4,data6bpe4,data7bpe4,data8bpe4,data9bpe4,data10bpe4,data11bpe4,data12bpe4,data13bpe4) {
     data1bpe3.innerHTML = '<p>Loading...</p>';
