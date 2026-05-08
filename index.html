@@ -129,9 +129,6 @@
             <br>
             <br>
             <br>
-
-      
-
             <br>
 
           </div>
@@ -1781,8 +1778,8 @@ document.querySelector(".rotatekputc").addEventListener("click", function () {
 document.querySelector(".rotatekpjasin").addEventListener("click", function () {
   this.classList.toggle("downjasin");
   document.querySelector(".kpjasinid").classList.toggle("kpjasinidshow");
-  input1 = 1;
-  input2 = 49;
+  input1 = 247;
+  input2 = 262;
   console.log(input1 + " " + input2);
   data1bpe3 = document.querySelector('#data1kpjasinbpe3');
   data2bpe3 = document.querySelector('#data2kpjasinbpe3');
@@ -1812,8 +1809,8 @@ document.querySelector(".rotatekpjasin").addEventListener("click", function () {
 document.querySelector(".rotatekpmerlimau").addEventListener("click", function () {
   this.classList.toggle("downmerlimau");
   document.querySelector(".kpmerlimauid").classList.toggle("kpmerlimauidshow");
-  input1 = 9;
-  input2 = 62;
+  input1 = 288;
+  input2 = 303;
   console.log(input1 + " " + input2);
   data1bpe3 = document.querySelector('#data1kpmerlimaubpe3');
   data2bpe3 = document.querySelector('#data2kpmerlimaubpe3');
@@ -1843,8 +1840,8 @@ document.querySelector(".rotatekpmerlimau").addEventListener("click", function (
 document.querySelector(".rotatekpumbai").addEventListener("click", function () {
   this.classList.toggle("downumbai");
   document.querySelector(".kpumbaiid").classList.toggle("kpumbaiidshow");
-  input1 = 17;
-  input2 = 75;
+  input1 = 329;
+  input2 = 344;
   console.log(input1 + " " + input2);
   data1bpe3 = document.querySelector('#data1kpumbaibpe3');
   data2bpe3 = document.querySelector('#data2kpumbaibpe3');
@@ -1874,8 +1871,8 @@ document.querySelector(".rotatekpumbai").addEventListener("click", function () {
 document.querySelector(".rotatekpselandar").addEventListener("click", function () {
   this.classList.toggle("downselandar");
   document.querySelector(".kpselandarid").classList.toggle("kpselandaridshow");
-  input1 = 25;
-  input2 = 88;
+  input1 = 370;
+  input2 = 385;
   console.log(input1 + " " + input2);
   data1bpe3 = document.querySelector('#data1kpselandarbpe3');
   data2bpe3 = document.querySelector('#data2kpselandarbpe3');
@@ -1905,8 +1902,8 @@ document.querySelector(".rotatekpselandar").addEventListener("click", function (
   document.querySelector(".rotatekpsimpangbekoh").addEventListener("click", function () {
   this.classList.toggle("downsimpangbekoh");
   document.querySelector(".kpsimpangbekohid").classList.toggle("kpsimpangbekohidshow");
-  input1 = 33;
-  input2 = 101;
+  input1 = 411;
+  input2 = 426;
   console.log(input1 + " " + input2);
   data1bpe3 = document.querySelector('#data1kpsimpangbekohbpe3');
   data2bpe3 = document.querySelector('#data2kpsimpangbekohbpe3');
@@ -1984,15 +1981,24 @@ document.querySelector(".rotatekpmasjidtanah").addEventListener("click", functio
   const chartAlorGajahBPE4 = document.getElementById('chartAlorGajahBPE4');
 
   const urljasin =
-    'https://docs.google.com/spreadsheets/d/e/2PACX-1vRCs2o3UQmvIdjsom90rV-nWWACCIyKhfsvCIK3TUiK8qdeyHi9coQnp9w7JCJ5C3JOq52AnjEewivo/pub?gid=1440127812&single=true&output=csv';
+    'https://docs.google.com/spreadsheets/d/e/2PACX-1vRCs2o3UQmvIdjsom90rV-nWWACCIyKhfsvCIK3TUiK8qdeyHi9coQnp9w7JCJ5C3JOq52AnjEewivo/pub?gid=1332322207&single=true&output=csv';
   const urlmelakatengah =
     'https://docs.google.com/spreadsheets/d/e/2PACX-1vSd1OjZcCDvYvSDdN_T78wfxoRE2TM8-jppOIRPVm2CQzvnLlEKs0msa4fJMdlQOuqEtZwbl-iZEgOY/pub?gid=1440127812&single=true&output=csv';
   const urlalorgajah =
     'https://docs.google.com/spreadsheets/d/e/2PACX-1vSlYJvWQlcIFt_ZoztdnPR7HtFsTWb4MbRPs4maaJKh5XW10pWbSHFnvsm5PXC9t49EGJ5-EuhDUYlQ/pub?gid=1440127812&single=true&output=csv';
+  const urltest =
+    'https://docs.google.com/spreadsheets/d/e/2PACX-1vRCs2o3UQmvIdjsom90rV-nWWACCIyKhfsvCIK3TUiK8qdeyHi9coQnp9w7JCJ5C3JOq52AnjEewivo/pub?gid=1332322207&single=true&output=csv';
 
   function getPosition(string, subString, index) {
     return string.split(subString, index).join(subString).length;
   }
+
+    fetch(urltest)
+    .then((result) => result.text())
+    .then(function(csvtext){
+      console.log(csvtext.substring(getPosition(csvtext,',',1)+1,getPosition(csvtext,',',2),));
+      console.log(csvtext);
+      });
 
   // build chart jasin
 
@@ -2044,68 +2050,68 @@ document.querySelector(".rotatekpmasjidtanah").addEventListener("click", functio
     .then((result) => result.text())
     .then(function (csvtext) { 
       data1jasinbpe3.innerHTML = csvtext.substring(
-      getPosition(csvtext,',',41)+1,getPosition(csvtext,',',42),);
+      getPosition(csvtext,',',452)+1,getPosition(csvtext,',',453),);
       data2jasinbpe3.innerHTML = csvtext.substring(
-      getPosition(csvtext,',',42)+1,getPosition(csvtext,',',43),);
+      getPosition(csvtext,',',453)+1,getPosition(csvtext,',',454),);
       data3jasinbpe3.innerHTML = csvtext.substring(
-      getPosition(csvtext,',',43)+1,getPosition(csvtext,',',44),);
+      getPosition(csvtext,',',455)+1,getPosition(csvtext,',',456),);
       data4jasinbpe3.innerHTML = csvtext.substring(
-      getPosition(csvtext,',',44)+1,getPosition(csvtext,',',45),);
+      getPosition(csvtext,',',457)+1,getPosition(csvtext,',',458),);
       data5jasinbpe3.innerHTML = csvtext.substring(
-      getPosition(csvtext,',',45)+1,getPosition(csvtext,',',46),);
+      getPosition(csvtext,',',459)+1,getPosition(csvtext,',',460),);
       data6jasinbpe3.innerHTML = csvtext.substring(
-      getPosition(csvtext,',',46)+1,getPosition(csvtext,',',47),);
+      getPosition(csvtext,',',461)+1,getPosition(csvtext,',',462),);
       data7jasinbpe3.innerHTML = csvtext.substring(
-      getPosition(csvtext,',',47)+1,getPosition(csvtext,',',48),);
+      getPosition(csvtext,',',463)+1,getPosition(csvtext,',',464),);
       data8jasinbpe3.innerHTML = csvtext.substring(
-      getPosition(csvtext,',',48)+1,getPosition(csvtext,',',49),);
+      getPosition(csvtext,',',465)+1,getPosition(csvtext,',',466),);
       data1jasinbpe4.innerHTML = csvtext.substring(
-      getPosition(csvtext,',',114)+1,getPosition(csvtext,',',115),);
+      getPosition(csvtext,',',467)+1,getPosition(csvtext,',',468),);
       data2jasinbpe4.innerHTML = csvtext.substring(
-      getPosition(csvtext,',',115)+1,getPosition(csvtext,',',116),);
+      getPosition(csvtext,',',468)+1,getPosition(csvtext,',',469),);
       data3jasinbpe4.innerHTML = csvtext.substring(
-      getPosition(csvtext,',',116)+1,getPosition(csvtext,',',117),);
+      getPosition(csvtext,',',470)+1,getPosition(csvtext,',',471),);
       data4jasinbpe4.innerHTML = csvtext.substring(
-      getPosition(csvtext,',',117)+1,getPosition(csvtext,',',118),);
+      getPosition(csvtext,',',472)+1,getPosition(csvtext,',',473),);
       data5jasinbpe4.innerHTML = csvtext.substring(
-      getPosition(csvtext,',',118)+1,getPosition(csvtext,',',119),);
+      getPosition(csvtext,',',474)+1,getPosition(csvtext,',',475),);
       data6jasinbpe4.innerHTML = csvtext.substring(
-      getPosition(csvtext,',',119)+1,getPosition(csvtext,',',120),);
+      getPosition(csvtext,',',476)+1,getPosition(csvtext,',',477),);
       data7jasinbpe4.innerHTML = csvtext.substring(
-      getPosition(csvtext,',',120)+1,getPosition(csvtext,',',121),);
+      getPosition(csvtext,',',478)+1,getPosition(csvtext,',',479),);
       data8jasinbpe4.innerHTML = csvtext.substring(
-      getPosition(csvtext,',',121)+1,getPosition(csvtext,',',122),);
+      getPosition(csvtext,',',480)+1,getPosition(csvtext,',',481),);
       data9jasinbpe4.innerHTML = csvtext.substring(
-      getPosition(csvtext,',',122)+1,getPosition(csvtext,',',123),);
+      getPosition(csvtext,',',482)+1,getPosition(csvtext,',',483),);
       data10jasinbpe4.innerHTML = csvtext.substring(
-      getPosition(csvtext,',',123)+1,getPosition(csvtext,',',124),);
+      getPosition(csvtext,',',484)+1,getPosition(csvtext,',',485),);
       data11jasinbpe4.innerHTML = csvtext.substring(
-      getPosition(csvtext,',',124)+1,getPosition(csvtext,',',125),);
+      getPosition(csvtext,',',486)+1,getPosition(csvtext,',',487),);
       data12jasinbpe4.innerHTML = csvtext.substring(
-      getPosition(csvtext,',',125)+1,getPosition(csvtext,',',126),);
+      getPosition(csvtext,',',488)+1,getPosition(csvtext,',',489),);
       data13jasinbpe4.innerHTML = csvtext.substring(
-      getPosition(csvtext,',',126)+1,getPosition(csvtext,',',127),).replace("year 2026","");
+      getPosition(csvtext,',',490)+1,getPosition(csvtext,',',491),).replace("year 2026","");
       data1 = [ 
-        parseFloat(csvtext.substring(getPosition(csvtext,',',168)+1,getPosition(csvtext,',',169),)),
-        parseFloat(csvtext.substring(getPosition(csvtext,',',169)+1,getPosition(csvtext,',',170),)),
-        parseFloat(csvtext.substring(getPosition(csvtext,',',170)+1,getPosition(csvtext,',',171),)),
-        parseFloat(csvtext.substring(getPosition(csvtext,',',171)+1,getPosition(csvtext,',',172),)),
-        parseFloat(csvtext.substring(getPosition(csvtext,',',172)+1,getPosition(csvtext,',',173),)),
-        parseFloat(csvtext.substring(getPosition(csvtext,',',173)+1,getPosition(csvtext,',',174),)),
-        parseFloat(csvtext.substring(getPosition(csvtext,',',174)+1,getPosition(csvtext,',',175),))];
+        parseFloat(csvtext.substring(getPosition(csvtext,',',454)+1,getPosition(csvtext,',',455),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',456)+1,getPosition(csvtext,',',457),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',458)+1,getPosition(csvtext,',',459),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',460)+1,getPosition(csvtext,',',461),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',462)+1,getPosition(csvtext,',',463),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',464)+1,getPosition(csvtext,',',465),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',466)+1,getPosition(csvtext,',',467),))];
       data2 = [ 
-        parseFloat(csvtext.substring(getPosition(csvtext,',',241)+1,getPosition(csvtext,',',242),)),
-        parseFloat(csvtext.substring(getPosition(csvtext,',',242)+1,getPosition(csvtext,',',243),)),
-        parseFloat(csvtext.substring(getPosition(csvtext,',',243)+1,getPosition(csvtext,',',244),)),
-        parseFloat(csvtext.substring(getPosition(csvtext,',',244)+1,getPosition(csvtext,',',245),)),
-        parseFloat(csvtext.substring(getPosition(csvtext,',',245)+1,getPosition(csvtext,',',246),)),
-        parseFloat(csvtext.substring(getPosition(csvtext,',',246)+1,getPosition(csvtext,',',247),)),
-        parseFloat(csvtext.substring(getPosition(csvtext,',',247)+1,getPosition(csvtext,',',248),)),
-        parseFloat(csvtext.substring(getPosition(csvtext,',',248)+1,getPosition(csvtext,',',249),)),
-        parseFloat(csvtext.substring(getPosition(csvtext,',',249)+1,getPosition(csvtext,',',250),)),
-        parseFloat(csvtext.substring(getPosition(csvtext,',',250)+1,getPosition(csvtext,',',251),)),
-        parseFloat(csvtext.substring(getPosition(csvtext,',',251)+1,getPosition(csvtext,',',252),)),
-        parseFloat(csvtext.substring(getPosition(csvtext,',',252)+1,getPosition(csvtext,',',253),).replace("year 2026",""))];
+        parseFloat(csvtext.substring(getPosition(csvtext,',',469)+1,getPosition(csvtext,',',470),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',471)+1,getPosition(csvtext,',',472),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',473)+1,getPosition(csvtext,',',474),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',475)+1,getPosition(csvtext,',',476),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',477)+1,getPosition(csvtext,',',478),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',479)+1,getPosition(csvtext,',',480),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',481)+1,getPosition(csvtext,',',482),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',483)+1,getPosition(csvtext,',',484),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',485)+1,getPosition(csvtext,',',486),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',487)+1,getPosition(csvtext,',',488),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',489)+1,getPosition(csvtext,',',490),)),
+        parseFloat(csvtext.substring(getPosition(csvtext,',',491)+1,getPosition(csvtext,',',492),).replace("year 2026",""))];
 
         theChartJasinBPE3 = new Chart(chartJasinBPE3, {
           type: 'bar',
@@ -2216,33 +2222,33 @@ document.querySelector(".rotatekpmasjidtanah").addEventListener("click", functio
 
       if (selectFacilityJasin.value == "DJ") {
 
-        input1 = 41;
-        input2 = 114;
+        input1 = 452;
+        input2 = 467;
 
       } else if (selectFacilityJasin.value == "KPJ") {
 
-        input1 = 1;
-        input2 = 49;
+        input1 = 247;
+        input2 = 262;
 
       } else if (selectFacilityJasin.value == "KPM") {
 
-        input1 = 9;
-        input2 = 62;
+        input1 = 288;
+        input2 = 303;
 
       } else if (selectFacilityJasin.value == "KPU") {
 
-        input1 = 17;
-        input2 = 75;
+        input1 = 329;
+        input2 = 344;
 
       } else if (selectFacilityJasin.value == "KPS") {
 
-        input1 = 25;
-        input2 = 88;
+        input1 = 370;
+        input2 = 385;
 
       } else if (selectFacilityJasin.value == "KPSB") {
 
-        input1 = 33;
-        input2 = 101;
+        input1 = 411;
+        input2 = 426;
 
       }
 
@@ -2256,33 +2262,33 @@ document.querySelector(".rotatekpmasjidtanah").addEventListener("click", functio
 
       if (selectFacilityJasin.value == "DJ") {
 
-        input1 = 293;
-        input2 = 366;
+        input1 = 206;
+        input2 = 221;
 
       } else if (selectFacilityJasin.value == "KPJ") {
 
-        input1 = 253;
-        input2 = 301;
+        input1 = 1;
+        input2 = 16;
 
       } else if (selectFacilityJasin.value == "KPM") {
 
-        input1 = 261;
-        input2 = 314;
+        input1 = 42;
+        input2 = 57;
 
       } else if (selectFacilityJasin.value == "KPU") {
 
-        input1 = 269;
-        input2 = 327;
+        input1 = 83;
+        input2 = 98;
 
       } else if (selectFacilityJasin.value == "KPS") {
 
-        input1 = 277;
-        input2 = 340;
+        input1 = 124;
+        input2 = 139;
 
       } else if (selectFacilityJasin.value == "KPSB") {
 
-        input1 = 285;
-        input2 = 353;
+        input1 = 165;
+        input2 = 180;
 
       }
 
@@ -2939,67 +2945,69 @@ document.querySelector(".rotatekpmasjidtanah").addEventListener("click", functio
     data2jasinbpe3.innerHTML = csvtext.substring(
     getPosition(csvtext,',',input1+1)+1,getPosition(csvtext,',',input1+2),).replace(texttoremove,"");
     data3jasinbpe3.innerHTML = csvtext.substring(
-    getPosition(csvtext,',',input1+2)+1,getPosition(csvtext,',',input1+3),).replace(texttoremove,"");
-    data4jasinbpe3.innerHTML = csvtext.substring(
     getPosition(csvtext,',',input1+3)+1,getPosition(csvtext,',',input1+4),).replace(texttoremove,"");
+    data4jasinbpe3.innerHTML = csvtext.substring(
+    getPosition(csvtext,',',input1+5)+1,getPosition(csvtext,',',input1+6),).replace(texttoremove,"");
     data5jasinbpe3.innerHTML = csvtext.substring(
-    getPosition(csvtext,',',input1+4)+1,getPosition(csvtext,',',input1+5),).replace(texttoremove,"");
-    data6jasinbpe3.innerHTML = csvtext.substring(
-    getPosition(csvtext,',',input1+5)+1,getPosition(csvtext,',',input1+6),).replace(texttoremove,"")
-    data7jasinbpe3.innerHTML = csvtext.substring(
-    getPosition(csvtext,',',input1+6)+1,getPosition(csvtext,',',input1+7),).replace(texttoremove,"");
-    data8jasinbpe3.innerHTML = csvtext.substring(
     getPosition(csvtext,',',input1+7)+1,getPosition(csvtext,',',input1+8),).replace(texttoremove,"");
+    data6jasinbpe3.innerHTML = csvtext.substring(
+    getPosition(csvtext,',',input1+9)+1,getPosition(csvtext,',',input1+10),).replace(texttoremove,"")
+    data7jasinbpe3.innerHTML = csvtext.substring(
+    getPosition(csvtext,',',input1+11)+1,getPosition(csvtext,',',input1+12),).replace(texttoremove,"");
+    data8jasinbpe3.innerHTML = csvtext.substring(
+    getPosition(csvtext,',',input1+13)+1,getPosition(csvtext,',',input1+14),).replace(texttoremove,"");
     data1jasinbpe4.innerHTML = csvtext.substring(
     getPosition(csvtext,',',input2)+1,getPosition(csvtext,',',input2+1),).replace(texttoremove,"");
     data2jasinbpe4.innerHTML = csvtext.substring(
     getPosition(csvtext,',',input2+1)+1,getPosition(csvtext,',',input2+2),).replace(texttoremove,"");
     data3jasinbpe4.innerHTML = csvtext.substring(
-    getPosition(csvtext,',',input2+2)+1,getPosition(csvtext,',',input2+3),).replace(texttoremove,"");
-    data4jasinbpe4.innerHTML = csvtext.substring(
     getPosition(csvtext,',',input2+3)+1,getPosition(csvtext,',',input2+4),).replace(texttoremove,"");
-    data5jasinbpe4.innerHTML = csvtext.substring(
-    getPosition(csvtext,',',input2+4)+1,getPosition(csvtext,',',input2+5),).replace(texttoremove,"");
-    data6jasinbpe4.innerHTML = csvtext.substring(
+    data4jasinbpe4.innerHTML = csvtext.substring(
     getPosition(csvtext,',',input2+5)+1,getPosition(csvtext,',',input2+6),).replace(texttoremove,"");
-    data7jasinbpe4.innerHTML = csvtext.substring(
-    getPosition(csvtext,',',input2+6)+1,getPosition(csvtext,',',input2+7),).replace(texttoremove,"");
-    data8jasinbpe4.innerHTML = csvtext.substring(
+    data5jasinbpe4.innerHTML = csvtext.substring(
     getPosition(csvtext,',',input2+7)+1,getPosition(csvtext,',',input2+8),).replace(texttoremove,"");
-    data9jasinbpe4.innerHTML = csvtext.substring(
-    getPosition(csvtext,',',input2+8)+1,getPosition(csvtext,',',input2+9),).replace(texttoremove,"");
-    data10jasinbpe4.innerHTML = csvtext.substring(
+    data6jasinbpe4.innerHTML = csvtext.substring(
     getPosition(csvtext,',',input2+9)+1,getPosition(csvtext,',',input2+10),).replace(texttoremove,"");
-    data11jasinbpe4.innerHTML = csvtext.substring(
-    getPosition(csvtext,',',input2+10)+1,getPosition(csvtext,',',input2+11),).replace(texttoremove,"");
-    data12jasinbpe4.innerHTML = csvtext.substring(
+    data7jasinbpe4.innerHTML = csvtext.substring(
     getPosition(csvtext,',',input2+11)+1,getPosition(csvtext,',',input2+12),).replace(texttoremove,"");
+    data8jasinbpe4.innerHTML = csvtext.substring(
+    getPosition(csvtext,',',input2+13)+1,getPosition(csvtext,',',input2+14),).replace(texttoremove,"");
+    data9jasinbpe4.innerHTML = csvtext.substring(
+    getPosition(csvtext,',',input2+15)+1,getPosition(csvtext,',',input2+16),).replace(texttoremove,"");
+    data10jasinbpe4.innerHTML = csvtext.substring(
+    getPosition(csvtext,',',input2+17)+1,getPosition(csvtext,',',input2+18),).replace(texttoremove,"");
+    data11jasinbpe4.innerHTML = csvtext.substring(
+    getPosition(csvtext,',',input2+19)+1,getPosition(csvtext,',',input2+20),).replace(texttoremove,"");
+    data12jasinbpe4.innerHTML = csvtext.substring(
+    getPosition(csvtext,',',input2+21)+1,getPosition(csvtext,',',input2+22),).replace(texttoremove,"");
     data13jasinbpe4.innerHTML = csvtext.substring(
-    getPosition(csvtext,',',input2+12)+1,getPosition(csvtext,',',input2+13),).replace(texttoremove,"");
+    getPosition(csvtext,',',input2+23)+1,getPosition(csvtext,',',input2+24),).replace(texttoremove,"");
 
     data1 = [ 
-      parseFloat(csvtext.substring(getPosition(csvtext,',',input1+127)+1,getPosition(csvtext,',',input1+128),).replace(texttoremove,"")),
-      parseFloat(csvtext.substring(getPosition(csvtext,',',input1+128)+1,getPosition(csvtext,',',input1+129),).replace(texttoremove,"")),
-      parseFloat(csvtext.substring(getPosition(csvtext,',',input1+129)+1,getPosition(csvtext,',',input1+130),).replace(texttoremove,"")),
-      parseFloat(csvtext.substring(getPosition(csvtext,',',input1+130)+1,getPosition(csvtext,',',input1+131),).replace(texttoremove,"")),
-      parseFloat(csvtext.substring(getPosition(csvtext,',',input1+131)+1,getPosition(csvtext,',',input1+132),).replace(texttoremove,"")),
-      parseFloat(csvtext.substring(getPosition(csvtext,',',input1+132)+1,getPosition(csvtext,',',input1+133),).replace(texttoremove,"")),
-      parseFloat(csvtext.substring(getPosition(csvtext,',',input1+133)+1,getPosition(csvtext,',',input1+134),).replace(texttoremove,""))];
+      parseFloat(csvtext.substring(getPosition(csvtext,',',input1+2)+1,getPosition(csvtext,',',input1+3),).replace(texttoremove,"")),
+      parseFloat(csvtext.substring(getPosition(csvtext,',',input1+4)+1,getPosition(csvtext,',',input1+5),).replace(texttoremove,"")),
+      parseFloat(csvtext.substring(getPosition(csvtext,',',input1+6)+1,getPosition(csvtext,',',input1+7),).replace(texttoremove,"")),
+      parseFloat(csvtext.substring(getPosition(csvtext,',',input1+8)+1,getPosition(csvtext,',',input1+9),).replace(texttoremove,"")),
+      parseFloat(csvtext.substring(getPosition(csvtext,',',input1+10)+1,getPosition(csvtext,',',input1+11),).replace(texttoremove,"")),
+      parseFloat(csvtext.substring(getPosition(csvtext,',',input1+12)+1,getPosition(csvtext,',',input1+13),).replace(texttoremove,"")),
+      parseFloat(csvtext.substring(getPosition(csvtext,',',input1+14)+1,getPosition(csvtext,',',input1+15),).replace(texttoremove,""))];
     data2 = [ 
-      parseFloat(csvtext.substring(getPosition(csvtext,',',input2+127)+1,getPosition(csvtext,',',input2+128),).replace(texttoremove,"")),
-      parseFloat(csvtext.substring(getPosition(csvtext,',',input2+128)+1,getPosition(csvtext,',',input2+129),).replace(texttoremove,"")),
-      parseFloat(csvtext.substring(getPosition(csvtext,',',input2+129)+1,getPosition(csvtext,',',input2+130),).replace(texttoremove,"")),
-      parseFloat(csvtext.substring(getPosition(csvtext,',',input2+130)+1,getPosition(csvtext,',',input2+131),).replace(texttoremove,"")),
-      parseFloat(csvtext.substring(getPosition(csvtext,',',input2+131)+1,getPosition(csvtext,',',input2+132),).replace(texttoremove,"")),
-      parseFloat(csvtext.substring(getPosition(csvtext,',',input2+132)+1,getPosition(csvtext,',',input2+133),).replace(texttoremove,"")),
-      parseFloat(csvtext.substring(getPosition(csvtext,',',input2+133)+1,getPosition(csvtext,',',input2+134),).replace(texttoremove,"")),
-      parseFloat(csvtext.substring(getPosition(csvtext,',',input2+134)+1,getPosition(csvtext,',',input2+135),).replace(texttoremove,"")),
-      parseFloat(csvtext.substring(getPosition(csvtext,',',input2+135)+1,getPosition(csvtext,',',input2+136),).replace(texttoremove,"")),
-      parseFloat(csvtext.substring(getPosition(csvtext,',',input2+136)+1,getPosition(csvtext,',',input2+137),).replace(texttoremove,"")),
-      parseFloat(csvtext.substring(getPosition(csvtext,',',input2+137)+1,getPosition(csvtext,',',input2+138),).replace(texttoremove,"")),
-      parseFloat(csvtext.substring(getPosition(csvtext,',',input2+138)+1,getPosition(csvtext,',',input2+139),).replace(texttoremove,""))];
+      parseFloat(csvtext.substring(getPosition(csvtext,',',input2+2)+1,getPosition(csvtext,',',input2+3),).replace(texttoremove,"")),
+      parseFloat(csvtext.substring(getPosition(csvtext,',',input2+4)+1,getPosition(csvtext,',',input2+5),).replace(texttoremove,"")),
+      parseFloat(csvtext.substring(getPosition(csvtext,',',input2+6)+1,getPosition(csvtext,',',input2+7),).replace(texttoremove,"")),
+      parseFloat(csvtext.substring(getPosition(csvtext,',',input2+8)+1,getPosition(csvtext,',',input2+9),).replace(texttoremove,"")),
+      parseFloat(csvtext.substring(getPosition(csvtext,',',input2+10)+1,getPosition(csvtext,',',input2+11),).replace(texttoremove,"")),
+      parseFloat(csvtext.substring(getPosition(csvtext,',',input2+12)+1,getPosition(csvtext,',',input2+13),).replace(texttoremove,"")),
+      parseFloat(csvtext.substring(getPosition(csvtext,',',input2+14)+1,getPosition(csvtext,',',input2+15),).replace(texttoremove,"")),
+      parseFloat(csvtext.substring(getPosition(csvtext,',',input2+16)+1,getPosition(csvtext,',',input2+17),).replace(texttoremove,"")),
+      parseFloat(csvtext.substring(getPosition(csvtext,',',input2+18)+1,getPosition(csvtext,',',input2+19),).replace(texttoremove,"")),
+      parseFloat(csvtext.substring(getPosition(csvtext,',',input2+20)+1,getPosition(csvtext,',',input2+21),).replace(texttoremove,"")),
+      parseFloat(csvtext.substring(getPosition(csvtext,',',input2+22)+1,getPosition(csvtext,',',input2+23),).replace(texttoremove,"")),
+      parseFloat(csvtext.substring(getPosition(csvtext,',',input2+24)+1,getPosition(csvtext,',',input2+25),).replace(texttoremove,""))];
     console.log(data1);
     console.log(data2);
+    console.log(input1);
+    console.log(input2);
     theChartJasinBPE3.data.datasets[0].data = data1;
     theChartJasinBPE3.update();
     theChartJasinBPE4.data.datasets[0].data = data2;
@@ -3240,43 +3248,43 @@ document.querySelector(".rotatekpmasjidtanah").addEventListener("click", functio
     data2bpe3.innerHTML = csvtext.substring(
     getPosition(csvtext,',',input1+1)+1,getPosition(csvtext,',',input1+2),).replace(texttoremove,"");
     data3bpe3.innerHTML = csvtext.substring(
-    getPosition(csvtext,',',input1+2)+1,getPosition(csvtext,',',input1+3),).replace(texttoremove,"");
-    data4bpe3.innerHTML = csvtext.substring(
     getPosition(csvtext,',',input1+3)+1,getPosition(csvtext,',',input1+4),).replace(texttoremove,"");
+    data4bpe3.innerHTML = csvtext.substring(
+    getPosition(csvtext,',',input1+5)+1,getPosition(csvtext,',',input1+6),).replace(texttoremove,"");
     data5bpe3.innerHTML = csvtext.substring(
-    getPosition(csvtext,',',input1+4)+1,getPosition(csvtext,',',input1+5),).replace(texttoremove,"");
-    data6bpe3.innerHTML = csvtext.substring(
-    getPosition(csvtext,',',input1+5)+1,getPosition(csvtext,',',input1+6),).replace(texttoremove,"")
-    data7bpe3.innerHTML = csvtext.substring(
-    getPosition(csvtext,',',input1+6)+1,getPosition(csvtext,',',input1+7),).replace(texttoremove,"");
-    data8bpe3.innerHTML = csvtext.substring(
     getPosition(csvtext,',',input1+7)+1,getPosition(csvtext,',',input1+8),).replace(texttoremove,"");
+    data6bpe3.innerHTML = csvtext.substring(
+    getPosition(csvtext,',',input1+9)+1,getPosition(csvtext,',',input1+10),).replace(texttoremove,"")
+    data7bpe3.innerHTML = csvtext.substring(
+    getPosition(csvtext,',',input1+11)+1,getPosition(csvtext,',',input1+12),).replace(texttoremove,"");
+    data8bpe3.innerHTML = csvtext.substring(
+    getPosition(csvtext,',',input1+13)+1,getPosition(csvtext,',',input1+14),).replace(texttoremove,"");
     data1bpe4.innerHTML = csvtext.substring(
     getPosition(csvtext,',',input2)+1,getPosition(csvtext,',',input2+1),).replace(texttoremove,"");
     data2bpe4.innerHTML = csvtext.substring(
     getPosition(csvtext,',',input2+1)+1,getPosition(csvtext,',',input2+2),).replace(texttoremove,"");
     data3bpe4.innerHTML = csvtext.substring(
-    getPosition(csvtext,',',input2+2)+1,getPosition(csvtext,',',input2+3),).replace(texttoremove,"");
-    data4bpe4.innerHTML = csvtext.substring(
     getPosition(csvtext,',',input2+3)+1,getPosition(csvtext,',',input2+4),).replace(texttoremove,"");
-    data5bpe4.innerHTML = csvtext.substring(
-    getPosition(csvtext,',',input2+4)+1,getPosition(csvtext,',',input2+5),).replace(texttoremove,"");
-    data6bpe4.innerHTML = csvtext.substring(
+    data4bpe4.innerHTML = csvtext.substring(
     getPosition(csvtext,',',input2+5)+1,getPosition(csvtext,',',input2+6),).replace(texttoremove,"");
-    data7bpe4.innerHTML = csvtext.substring(
-    getPosition(csvtext,',',input2+6)+1,getPosition(csvtext,',',input2+7),).replace(texttoremove,"");
-    data8bpe4.innerHTML = csvtext.substring(
+    data5bpe4.innerHTML = csvtext.substring(
     getPosition(csvtext,',',input2+7)+1,getPosition(csvtext,',',input2+8),).replace(texttoremove,"");
-    data9bpe4.innerHTML = csvtext.substring(
-    getPosition(csvtext,',',input2+8)+1,getPosition(csvtext,',',input2+9),).replace(texttoremove,"");
-    data10bpe4.innerHTML = csvtext.substring(
+    data6bpe4.innerHTML = csvtext.substring(
     getPosition(csvtext,',',input2+9)+1,getPosition(csvtext,',',input2+10),).replace(texttoremove,"");
-    data11bpe4.innerHTML = csvtext.substring(
-    getPosition(csvtext,',',input2+10)+1,getPosition(csvtext,',',input2+11),).replace(texttoremove,"");
-    data12bpe4.innerHTML = csvtext.substring(
+    data7bpe4.innerHTML = csvtext.substring(
     getPosition(csvtext,',',input2+11)+1,getPosition(csvtext,',',input2+12),).replace(texttoremove,"");
+    data8bpe4.innerHTML = csvtext.substring(
+    getPosition(csvtext,',',input2+13)+1,getPosition(csvtext,',',input2+14),).replace(texttoremove,"");
+    data9bpe4.innerHTML = csvtext.substring(
+    getPosition(csvtext,',',input2+15)+1,getPosition(csvtext,',',input2+16),).replace(texttoremove,"");
+    data10bpe4.innerHTML = csvtext.substring(
+    getPosition(csvtext,',',input2+17)+1,getPosition(csvtext,',',input2+18),).replace(texttoremove,"");
+    data11bpe4.innerHTML = csvtext.substring(
+    getPosition(csvtext,',',input2+19)+1,getPosition(csvtext,',',input2+20),).replace(texttoremove,"");
+    data12bpe4.innerHTML = csvtext.substring(
+    getPosition(csvtext,',',input2+21)+1,getPosition(csvtext,',',input2+22),).replace(texttoremove,"");
     data13bpe4.innerHTML = csvtext.substring(
-    getPosition(csvtext,',',input2+12)+1,getPosition(csvtext,',',input2+13),).replace(texttoremove,"");
+    getPosition(csvtext,',',input2+23)+1,getPosition(csvtext,',',input2+24),).replace(texttoremove,"");
     })
   }
 
